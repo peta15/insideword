@@ -6,4 +6,4 @@ InsideWord is a news and blogging platform where your content is aggregated into
 authors
 ==========
 
-InsideWord was originally created in private.  It has been open sourced to contribute back to the community.  It is brought to you by @peta15, @thirlan, and Aaron Kligman
+InsideWord was originally created in private.  It has been open sourced to contribute back to the community.  It is brought to you by [Peta15](https://github.com/peta15), [Thirlan](https://github.com/thirlan), and Aaron Kligman
