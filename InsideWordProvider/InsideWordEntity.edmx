@@ -1,0 +1,2715 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="insideWordEntity.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="insideWordEntityStoreContainer">
+          <EntitySet Name="AlternateArticleIds" EntityType="insideWordEntity.Store.AlternateArticleIds" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="AlternateCategoryIds" EntityType="insideWordEntity.Store.AlternateCategoryIds" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="AlternateMemberIds" EntityType="insideWordEntity.Store.AlternateMemberIds" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="Articles" EntityType="insideWordEntity.Store.Articles" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="ArticleScores" EntityType="insideWordEntity.Store.ArticleScores" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="ArticleTexts" EntityType="insideWordEntity.Store.ArticleTexts" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="ArticleVotes" EntityType="insideWordEntity.Store.ArticleVotes" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="Categories" EntityType="insideWordEntity.Store.Categories" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="Comments" EntityType="insideWordEntity.Store.Comments" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="Conversations" EntityType="insideWordEntity.Store.Conversations" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="ConversationScores" EntityType="insideWordEntity.Store.ConversationScores" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="ConversationVotes" EntityType="insideWordEntity.Store.ConversationVotes" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="Groups" EntityType="insideWordEntity.Store.Groups" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="InsideWordSettings" EntityType="insideWordEntity.Store.InsideWordSettings" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="JoinArticlesAndAlternateCategories" EntityType="insideWordEntity.Store.JoinArticlesAndAlternateCategories" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="JoinArticlesAndCategories" EntityType="insideWordEntity.Store.JoinArticlesAndCategories" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="JoinArticlesAndMembers" EntityType="insideWordEntity.Store.JoinArticlesAndMembers" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="JoinArticlesAndPhotos" EntityType="insideWordEntity.Store.JoinArticlesAndPhotos" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="JoinMembersAndMembers" EntityType="insideWordEntity.Store.JoinMembersAndMembers" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="JoinMembersAndPhotos" EntityType="insideWordEntity.Store.JoinMembersAndPhotos" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="JoinMembershipsAndRoles" EntityType="insideWordEntity.Store.JoinMembershipsAndRoles" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="JoinRolesAndPermissions" EntityType="insideWordEntity.Store.JoinRolesAndPermissions" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="Members" EntityType="insideWordEntity.Store.Members" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="Memberships" EntityType="insideWordEntity.Store.Memberships" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="Permissions" EntityType="insideWordEntity.Store.Permissions" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="Photos" EntityType="insideWordEntity.Store.Photos" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="PhotoScores" EntityType="insideWordEntity.Store.PhotoScores" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="PhotoVotes" EntityType="insideWordEntity.Store.PhotoVotes" store:Type="Tables" Schema="insideWordDb" />
+          <EntitySet Name="Roles" EntityType="insideWordEntity.Store.Roles" store:Type="Tables" Schema="insideWordDb" />
+          <AssociationSet Name="FK_AlternateArticleIds_Articles" Association="insideWordEntity.Store.FK_AlternateArticleIds_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="AlternateArticleIds" EntitySet="AlternateArticleIds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlternateArticleIds_Members" Association="insideWordEntity.Store.FK_AlternateArticleIds_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="AlternateArticleIds" EntitySet="AlternateArticleIds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlternateCategoryIds_AlternateCategoryIds" Association="insideWordEntity.Store.FK_AlternateCategoryIds_AlternateCategoryIds">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="AlternateCategoryIds" EntitySet="AlternateCategoryIds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlternateCategoryIds_Members" Association="insideWordEntity.Store.FK_AlternateCategoryIds_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="AlternateCategoryIds" EntitySet="AlternateCategoryIds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlternateMemberIds_Members" Association="insideWordEntity.Store.FK_AlternateMemberIds_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="AlternateMemberIds" EntitySet="AlternateMemberIds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Articles_Members" Association="insideWordEntity.Store.FK_Articles_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="Articles" EntitySet="Articles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleScores_Articles" Association="insideWordEntity.Store.FK_ArticleScores_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="ArticleScores" EntitySet="ArticleScores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleTexts_Articles" Association="insideWordEntity.Store.FK_ArticleTexts_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="ArticleTexts" EntitySet="ArticleTexts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleVotes_Articles" Association="insideWordEntity.Store.FK_ArticleVotes_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="ArticleVotes" EntitySet="ArticleVotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleVotes_Members" Association="insideWordEntity.Store.FK_ArticleVotes_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="ArticleVotes" EntitySet="ArticleVotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Categories_Categories" Association="insideWordEntity.Store.FK_Categories_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Categories1" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_Members" Association="insideWordEntity.Store.FK_Comments_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Conversations_Articles" Association="insideWordEntity.Store.FK_Conversations_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="Conversations" EntitySet="Conversations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Conversations_Author" Association="insideWordEntity.Store.FK_Conversations_Author">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="Conversations" EntitySet="Conversations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Conversations_Comments" Association="insideWordEntity.Store.FK_Conversations_Comments">
+            <End Role="Conversations" EntitySet="Conversations" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Conversations_Photos" Association="insideWordEntity.Store.FK_Conversations_Photos">
+            <End Role="Photos" EntitySet="Photos" />
+            <End Role="Conversations" EntitySet="Conversations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ConversationScores_Conversations" Association="insideWordEntity.Store.FK_ConversationScores_Conversations">
+            <End Role="Conversations" EntitySet="Conversations" />
+            <End Role="ConversationScores" EntitySet="ConversationScores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ConversationVotes_Conversations" Association="insideWordEntity.Store.FK_ConversationVotes_Conversations">
+            <End Role="Conversations" EntitySet="Conversations" />
+            <End Role="ConversationVotes" EntitySet="ConversationVotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ConversationVotes_Members" Association="insideWordEntity.Store.FK_ConversationVotes_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="ConversationVotes" EntitySet="ConversationVotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinArticlesAndAlternateCategories_AlternateCategoryIds" Association="insideWordEntity.Store.FK_JoinArticlesAndAlternateCategories_AlternateCategoryIds">
+            <End Role="AlternateCategoryIds" EntitySet="AlternateCategoryIds" />
+            <End Role="JoinArticlesAndAlternateCategories" EntitySet="JoinArticlesAndAlternateCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinArticlesAndAlternateCategories_Articles" Association="insideWordEntity.Store.FK_JoinArticlesAndAlternateCategories_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="JoinArticlesAndAlternateCategories" EntitySet="JoinArticlesAndAlternateCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinArticlesAndMembers_Articles" Association="insideWordEntity.Store.FK_JoinArticlesAndMembers_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="JoinArticlesAndMembers" EntitySet="JoinArticlesAndMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinArticlesAndMembers_Members" Association="insideWordEntity.Store.FK_JoinArticlesAndMembers_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="JoinArticlesAndMembers" EntitySet="JoinArticlesAndMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinCategoriesAndArticles_Articles" Association="insideWordEntity.Store.FK_JoinCategoriesAndArticles_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="JoinArticlesAndCategories" EntitySet="JoinArticlesAndCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinCategoriesAndArticles_Categories" Association="insideWordEntity.Store.FK_JoinCategoriesAndArticles_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="JoinArticlesAndCategories" EntitySet="JoinArticlesAndCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinMembersAndMembers_From_Members" Association="insideWordEntity.Store.FK_JoinMembersAndMembers_From_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="JoinMembersAndMembers" EntitySet="JoinMembersAndMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinMembersAndMembers_To_Members" Association="insideWordEntity.Store.FK_JoinMembersAndMembers_To_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="JoinMembersAndMembers" EntitySet="JoinMembersAndMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinMembershipsAndRoles_Memberships" Association="insideWordEntity.Store.FK_JoinMembershipsAndRoles_Memberships">
+            <End Role="Memberships" EntitySet="Memberships" />
+            <End Role="JoinMembershipsAndRoles" EntitySet="JoinMembershipsAndRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinMembershipsAndRoles_Roles" Association="insideWordEntity.Store.FK_JoinMembershipsAndRoles_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="JoinMembershipsAndRoles" EntitySet="JoinMembershipsAndRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinPhotosAndArticles_Articles" Association="insideWordEntity.Store.FK_JoinPhotosAndArticles_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="JoinArticlesAndPhotos" EntitySet="JoinArticlesAndPhotos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinPhotosAndArticles_Photos" Association="insideWordEntity.Store.FK_JoinPhotosAndArticles_Photos">
+            <End Role="Photos" EntitySet="Photos" />
+            <End Role="JoinArticlesAndPhotos" EntitySet="JoinArticlesAndPhotos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinPhotosAndMembers_Members" Association="insideWordEntity.Store.FK_JoinPhotosAndMembers_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="JoinMembersAndPhotos" EntitySet="JoinMembersAndPhotos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinPhotosAndUsers_Photos" Association="insideWordEntity.Store.FK_JoinPhotosAndUsers_Photos">
+            <End Role="Photos" EntitySet="Photos" />
+            <End Role="JoinMembersAndPhotos" EntitySet="JoinMembersAndPhotos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinRolesAndPermissions_Permissions" Association="insideWordEntity.Store.FK_JoinRolesAndPermissions_Permissions">
+            <End Role="Permissions" EntitySet="Permissions" />
+            <End Role="JoinRolesAndPermissions" EntitySet="JoinRolesAndPermissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JoinRolesAndPermissions_Roles" Association="insideWordEntity.Store.FK_JoinRolesAndPermissions_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="JoinRolesAndPermissions" EntitySet="JoinRolesAndPermissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Members_Photos" Association="insideWordEntity.Store.FK_Members_Photos">
+            <End Role="Photos" EntitySet="Photos" />
+            <End Role="Members" EntitySet="Members" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Memberships_Groups" Association="insideWordEntity.Store.FK_Memberships_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Memberships" EntitySet="Memberships" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Memberships_Members" Association="insideWordEntity.Store.FK_Memberships_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="Memberships" EntitySet="Memberships" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Permissions_Groups" Association="insideWordEntity.Store.FK_Permissions_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Permissions" EntitySet="Permissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Members" Association="insideWordEntity.Store.FK_Photos_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Photos" Association="insideWordEntity.Store.FK_Photos_Photos">
+            <End Role="Photos" EntitySet="Photos" />
+            <End Role="Photos1" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhotoScores_Photos" Association="insideWordEntity.Store.FK_PhotoScores_Photos">
+            <End Role="Photos" EntitySet="Photos" />
+            <End Role="PhotoScores" EntitySet="PhotoScores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhotoVotes_Members" Association="insideWordEntity.Store.FK_PhotoVotes_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="PhotoVotes" EntitySet="PhotoVotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhotoVotes_Photos" Association="insideWordEntity.Store.FK_PhotoVotes_Photos">
+            <End Role="Photos" EntitySet="Photos" />
+            <End Role="PhotoVotes" EntitySet="PhotoVotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Roles_Groups" Association="insideWordEntity.Store.FK_Roles_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="Roles" EntitySet="Roles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AlternateArticleIds">
+          <Key>
+            <PropertyRef Name="AlternateArticleIdId" />
+          </Key>
+          <Property Name="AlternateArticleIdId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="ArticleId" Type="bigint" Nullable="false" />
+          <Property Name="MemberId" Type="bigint" Nullable="false" />
+          <Property Name="AlternateId" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="AlternateCategoryIds">
+          <Key>
+            <PropertyRef Name="AlternateCategoryIdId" />
+          </Key>
+          <Property Name="AlternateCategoryIdId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="CategoryId" Type="bigint" />
+          <Property Name="MemberId" Type="bigint" Nullable="false" />
+          <Property Name="AlternateId" Type="bigint" Nullable="false" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="256" />
+          <Property Name="OverrideFlag" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AlternateMemberIds">
+          <Key>
+            <PropertyRef Name="AlternateMemberIdId" />
+          </Key>
+          <Property Name="AlternateMemberIdId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="EditDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ExpiryDate" Type="datetime2" />
+          <Property Name="MemberId" Type="bigint" Nullable="false" />
+          <Property Name="AlternateType" Type="int" Nullable="false" />
+          <Property Name="AlternateId" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Data" Type="nvarchar" MaxLength="128" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="64" />
+          <Property Name="UsePassword" Type="bit" Nullable="false" />
+          <Property Name="IsValidated" Type="bit" Nullable="false" />
+          <Property Name="IsNonce" Type="bit" Nullable="false" />
+          <Property Name="IsHidden" Type="bit" Nullable="false" />
+          <Property Name="IsHashed" Type="bit" Nullable="false" />
+          <Property Name="LoginCount" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Articles">
+          <Key>
+            <PropertyRef Name="ArticleId" />
+          </Key>
+          <Property Name="ArticleId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="EditDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="MemberId" Type="bigint" />
+          <Property Name="Blurb" Type="nvarchar" MaxLength="256" />
+          <Property Name="IsHidden" Type="bit" Nullable="false" />
+          <Property Name="ReadCount" Type="int" Nullable="false" />
+          <Property Name="IgnoreFlags" Type="bit" Nullable="false" />
+          <Property Name="IsPublished" Type="bit" Nullable="false" />
+          <Property Name="BlurbIsAutoGen" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ArticleScores">
+          <Key>
+            <PropertyRef Name="ArticleScoreId" />
+          </Key>
+          <Property Name="ArticleScoreId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ArticleId" Type="bigint" Nullable="false" />
+          <Property Name="ScoreType" Type="int" Nullable="false" />
+          <Property Name="Score" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ArticleTexts">
+          <Key>
+            <PropertyRef Name="ArticleTextId" />
+          </Key>
+          <Property Name="ArticleTextId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ArticleId" Type="bigint" Nullable="false" />
+          <Property Name="TextType" Type="int" Nullable="false" />
+          <Property Name="Version" Type="int" Nullable="false" />
+          <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ArticleVotes">
+          <Key>
+            <PropertyRef Name="ArticleVoteId" />
+          </Key>
+          <Property Name="ArticleVoteId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ArticleId" Type="bigint" Nullable="false" />
+          <Property Name="MemberId" Type="bigint" />
+          <Property Name="VoteWeight" Type="int" Nullable="false" />
+          <Property Name="IsShadowVote" Type="bit" Nullable="false" />
+          <Property Name="IsFlag" Type="bit" Nullable="false" />
+          <Property Name="Text" Type="nvarchar" Nullable="false" MaxLength="512" />
+          <Property Name="IsHidden" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="EditDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ParentCategoryId" Type="bigint" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="IsHidden" Type="bit" Nullable="false" />
+          <Property Name="HierarchyLevel" Type="int" Nullable="false" />
+          <Property Name="FullPath" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Comments">
+          <Key>
+            <PropertyRef Name="CommentId" />
+          </Key>
+          <Property Name="CommentId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConversationId" Type="bigint" Nullable="false" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="EditDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="MemberId" Type="bigint" />
+          <Property Name="Text" Type="nvarchar" Nullable="false" MaxLength="512" />
+          <Property Name="IsHidden" Type="bit" Nullable="false" />
+          <Property Name="IsFlagged" Type="int" Nullable="false" />
+          <Property Name="IgnoreFlags" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Conversations">
+          <Key>
+            <PropertyRef Name="ConversationId" />
+          </Key>
+          <Property Name="ConversationId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="EditDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ArticleId" Type="bigint" />
+          <Property Name="PhotoId" Type="bigint" />
+          <Property Name="MemberId" Type="bigint" />
+          <Property Name="IsHidden" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ConversationScores">
+          <Key>
+            <PropertyRef Name="ConversationScoreId" />
+          </Key>
+          <Property Name="ConversationScoreId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ConversationId" Type="bigint" Nullable="false" />
+          <Property Name="Score" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ConversationVotes">
+          <Key>
+            <PropertyRef Name="ConversationVoteId" />
+          </Key>
+          <Property Name="ConversationVoteId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ConversationId" Type="bigint" Nullable="false" />
+          <Property Name="MemberId" Type="bigint" />
+          <Property Name="VoteWeight" Type="int" Nullable="false" />
+          <Property Name="IsShadowVote" Type="bit" Nullable="false" />
+          <Property Name="IsFlag" Type="bit" Nullable="false" />
+          <Property Name="Text" Type="nvarchar" Nullable="false" MaxLength="512" />
+          <Property Name="IsHidden" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Groups">
+          <Key>
+            <PropertyRef Name="GroupId" />
+          </Key>
+          <Property Name="GroupId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="EditDate" Type="datetime2" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="IsHidden" Type="bit" Nullable="false" />
+          <Property Name="IsBanned" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InsideWordSettings">
+          <Key>
+            <PropertyRef Name="InsideWordSettingsId" />
+          </Key>
+          <Property Name="InsideWordSettingsId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SettingKey" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="SettingValue" Type="nvarchar" Nullable="false" MaxLength="512" />
+        </EntityType>
+        <EntityType Name="JoinArticlesAndAlternateCategories">
+          <Key>
+            <PropertyRef Name="ArticleId" />
+            <PropertyRef Name="AlternateCategoryIdId" />
+          </Key>
+          <Property Name="ArticleId" Type="bigint" Nullable="false" />
+          <Property Name="AlternateCategoryIdId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JoinArticlesAndCategories">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+            <PropertyRef Name="ArticleId" />
+          </Key>
+          <Property Name="CategoryId" Type="bigint" Nullable="false" />
+          <Property Name="ArticleId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JoinArticlesAndMembers">
+          <Key>
+            <PropertyRef Name="ArticleId" />
+            <PropertyRef Name="MemberId" />
+          </Key>
+          <Property Name="ArticleId" Type="bigint" Nullable="false" />
+          <Property Name="MemberId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JoinArticlesAndPhotos">
+          <Key>
+            <PropertyRef Name="PhotoId" />
+            <PropertyRef Name="ArticleId" />
+          </Key>
+          <Property Name="PhotoId" Type="bigint" Nullable="false" />
+          <Property Name="ArticleId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JoinMembersAndMembers">
+          <Key>
+            <PropertyRef Name="FromMemberId" />
+            <PropertyRef Name="ToMemberId" />
+          </Key>
+          <Property Name="FromMemberId" Type="bigint" Nullable="false" />
+          <Property Name="ToMemberId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JoinMembersAndPhotos">
+          <Key>
+            <PropertyRef Name="PhotoId" />
+            <PropertyRef Name="MemberId" />
+          </Key>
+          <Property Name="PhotoId" Type="bigint" Nullable="false" />
+          <Property Name="MemberId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JoinMembershipsAndRoles">
+          <Key>
+            <PropertyRef Name="MembershipId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="MembershipId" Type="bigint" Nullable="false" />
+          <Property Name="RoleId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JoinRolesAndPermissions">
+          <Key>
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="PermissionId" />
+          </Key>
+          <Property Name="RoleId" Type="bigint" Nullable="false" />
+          <Property Name="PermissionId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Members">
+          <Key>
+            <PropertyRef Name="MemberId" />
+          </Key>
+          <Property Name="MemberId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="EditDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="128" />
+          <Property Name="PhotoId" Type="bigint" />
+          <Property Name="Bio" Type="nvarchar" MaxLength="1024" />
+          <Property Name="IsSuperAdmin" Type="bit" Nullable="false" />
+          <Property Name="IsMasterAdmin" Type="bit" Nullable="false" />
+          <Property Name="IsUserAdmin" Type="bit" Nullable="false" />
+          <Property Name="IsCategoryAdmin" Type="bit" Nullable="false" />
+          <Property Name="IsArticleAdmin" Type="bit" Nullable="false" />
+          <Property Name="IsBanned" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Memberships">
+          <Key>
+            <PropertyRef Name="MembershipId" />
+          </Key>
+          <Property Name="MembershipId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GroupId" Type="bigint" Nullable="false" />
+          <Property Name="MemberId" Type="bigint" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="EditDate" Type="datetime2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Permissions">
+          <Key>
+            <PropertyRef Name="PermissionId" />
+          </Key>
+          <Property Name="PermissionId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="GroupId" Type="bigint" />
+          <Property Name="ObjectTypeId" Type="bigint" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+          <Property Name="CanCreate" Type="bit" Nullable="false" />
+          <Property Name="CanEdit" Type="bit" Nullable="false" />
+          <Property Name="CanRead" Type="bit" Nullable="false" />
+          <Property Name="CanDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Photos">
+          <Key>
+            <PropertyRef Name="PhotoId" />
+          </Key>
+          <Property Name="PhotoId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="EditDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ImageUrl" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="PhysicalPath" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="IsThumbnail" Type="bit" Nullable="false" />
+          <Property Name="ImageType" Type="int" Nullable="false" />
+          <Property Name="OriginalId" Type="bigint" />
+          <Property Name="Photographer" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="MemberId" Type="bigint" />
+          <Property Name="Caption" Type="nvarchar" MaxLength="128" />
+          <Property Name="IsHidden" Type="bit" Nullable="false" />
+          <Property Name="DisplayWidth" Type="smallint" />
+          <Property Name="DisplayHeight" Type="smallint" />
+          <Property Name="IgnoreFlags" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PhotoScores">
+          <Key>
+            <PropertyRef Name="PhotoScoreId" />
+          </Key>
+          <Property Name="PhotoScoreId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="PhotoId" Type="bigint" Nullable="false" />
+          <Property Name="Score" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PhotoVotes">
+          <Key>
+            <PropertyRef Name="PhotoVoteId" />
+          </Key>
+          <Property Name="PhotoVoteId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="PhotoId" Type="bigint" Nullable="false" />
+          <Property Name="MemberId" Type="bigint" />
+          <Property Name="VoteWeight" Type="int" Nullable="false" />
+          <Property Name="IsShadowVote" Type="bit" Nullable="false" />
+          <Property Name="IsFlag" Type="bit" Nullable="false" />
+          <Property Name="Text" Type="nvarchar" Nullable="false" MaxLength="512" />
+          <Property Name="IsHidden" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SystemCreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="SystemEditDate" Type="datetime2" Nullable="false" />
+          <Property Name="GroupId" Type="bigint" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <Association Name="FK_AlternateArticleIds_Articles">
+          <End Role="Articles" Type="insideWordEntity.Store.Articles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AlternateArticleIds" Type="insideWordEntity.Store.AlternateArticleIds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="ArticleId" />
+            </Principal>
+            <Dependent Role="AlternateArticleIds">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlternateArticleIds_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AlternateArticleIds" Type="insideWordEntity.Store.AlternateArticleIds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="AlternateArticleIds">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlternateCategoryIds_AlternateCategoryIds">
+          <End Role="Categories" Type="insideWordEntity.Store.Categories" Multiplicity="0..1" />
+          <End Role="AlternateCategoryIds" Type="insideWordEntity.Store.AlternateCategoryIds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="AlternateCategoryIds">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlternateCategoryIds_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AlternateCategoryIds" Type="insideWordEntity.Store.AlternateCategoryIds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="AlternateCategoryIds">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlternateMemberIds_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AlternateMemberIds" Type="insideWordEntity.Store.AlternateMemberIds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="AlternateMemberIds">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Articles_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="0..1" />
+          <End Role="Articles" Type="insideWordEntity.Store.Articles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="Articles">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleScores_Articles">
+          <End Role="Articles" Type="insideWordEntity.Store.Articles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ArticleScores" Type="insideWordEntity.Store.ArticleScores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="ArticleId" />
+            </Principal>
+            <Dependent Role="ArticleScores">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleTexts_Articles">
+          <End Role="Articles" Type="insideWordEntity.Store.Articles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ArticleTexts" Type="insideWordEntity.Store.ArticleTexts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="ArticleId" />
+            </Principal>
+            <Dependent Role="ArticleTexts">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleVotes_Articles">
+          <End Role="Articles" Type="insideWordEntity.Store.Articles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ArticleVotes" Type="insideWordEntity.Store.ArticleVotes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="ArticleId" />
+            </Principal>
+            <Dependent Role="ArticleVotes">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleVotes_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="0..1" />
+          <End Role="ArticleVotes" Type="insideWordEntity.Store.ArticleVotes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="ArticleVotes">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Categories_Categories">
+          <End Role="Categories" Type="insideWordEntity.Store.Categories" Multiplicity="0..1" />
+          <End Role="Categories1" Type="insideWordEntity.Store.Categories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Categories1">
+              <PropertyRef Name="ParentCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="0..1" />
+          <End Role="Comments" Type="insideWordEntity.Store.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Conversations_Articles">
+          <End Role="Articles" Type="insideWordEntity.Store.Articles" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Conversations" Type="insideWordEntity.Store.Conversations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="ArticleId" />
+            </Principal>
+            <Dependent Role="Conversations">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Conversations_Author">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="0..1" />
+          <End Role="Conversations" Type="insideWordEntity.Store.Conversations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="Conversations">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Conversations_Comments">
+          <End Role="Conversations" Type="insideWordEntity.Store.Conversations" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Comments" Type="insideWordEntity.Store.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conversations">
+              <PropertyRef Name="ConversationId" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="ConversationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Conversations_Photos">
+          <End Role="Photos" Type="insideWordEntity.Store.Photos" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Conversations" Type="insideWordEntity.Store.Conversations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Photos">
+              <PropertyRef Name="PhotoId" />
+            </Principal>
+            <Dependent Role="Conversations">
+              <PropertyRef Name="PhotoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ConversationScores_Conversations">
+          <End Role="Conversations" Type="insideWordEntity.Store.Conversations" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ConversationScores" Type="insideWordEntity.Store.ConversationScores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conversations">
+              <PropertyRef Name="ConversationId" />
+            </Principal>
+            <Dependent Role="ConversationScores">
+              <PropertyRef Name="ConversationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ConversationVotes_Conversations">
+          <End Role="Conversations" Type="insideWordEntity.Store.Conversations" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ConversationVotes" Type="insideWordEntity.Store.ConversationVotes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conversations">
+              <PropertyRef Name="ConversationId" />
+            </Principal>
+            <Dependent Role="ConversationVotes">
+              <PropertyRef Name="ConversationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ConversationVotes_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="0..1" />
+          <End Role="ConversationVotes" Type="insideWordEntity.Store.ConversationVotes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="ConversationVotes">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinArticlesAndAlternateCategories_AlternateCategoryIds">
+          <End Role="AlternateCategoryIds" Type="insideWordEntity.Store.AlternateCategoryIds" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinArticlesAndAlternateCategories" Type="insideWordEntity.Store.JoinArticlesAndAlternateCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlternateCategoryIds">
+              <PropertyRef Name="AlternateCategoryIdId" />
+            </Principal>
+            <Dependent Role="JoinArticlesAndAlternateCategories">
+              <PropertyRef Name="AlternateCategoryIdId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinArticlesAndAlternateCategories_Articles">
+          <End Role="Articles" Type="insideWordEntity.Store.Articles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinArticlesAndAlternateCategories" Type="insideWordEntity.Store.JoinArticlesAndAlternateCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="ArticleId" />
+            </Principal>
+            <Dependent Role="JoinArticlesAndAlternateCategories">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinArticlesAndMembers_Articles">
+          <End Role="Articles" Type="insideWordEntity.Store.Articles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinArticlesAndMembers" Type="insideWordEntity.Store.JoinArticlesAndMembers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="ArticleId" />
+            </Principal>
+            <Dependent Role="JoinArticlesAndMembers">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinArticlesAndMembers_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinArticlesAndMembers" Type="insideWordEntity.Store.JoinArticlesAndMembers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="JoinArticlesAndMembers">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinCategoriesAndArticles_Articles">
+          <End Role="Articles" Type="insideWordEntity.Store.Articles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinArticlesAndCategories" Type="insideWordEntity.Store.JoinArticlesAndCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="ArticleId" />
+            </Principal>
+            <Dependent Role="JoinArticlesAndCategories">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinCategoriesAndArticles_Categories">
+          <End Role="Categories" Type="insideWordEntity.Store.Categories" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinArticlesAndCategories" Type="insideWordEntity.Store.JoinArticlesAndCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="JoinArticlesAndCategories">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinMembersAndMembers_From_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinMembersAndMembers" Type="insideWordEntity.Store.JoinMembersAndMembers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="JoinMembersAndMembers">
+              <PropertyRef Name="FromMemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinMembersAndMembers_To_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="1" />
+          <End Role="JoinMembersAndMembers" Type="insideWordEntity.Store.JoinMembersAndMembers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="JoinMembersAndMembers">
+              <PropertyRef Name="ToMemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinMembershipsAndRoles_Memberships">
+          <End Role="Memberships" Type="insideWordEntity.Store.Memberships" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinMembershipsAndRoles" Type="insideWordEntity.Store.JoinMembershipsAndRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Memberships">
+              <PropertyRef Name="MembershipId" />
+            </Principal>
+            <Dependent Role="JoinMembershipsAndRoles">
+              <PropertyRef Name="MembershipId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinMembershipsAndRoles_Roles">
+          <End Role="Roles" Type="insideWordEntity.Store.Roles" Multiplicity="1" />
+          <End Role="JoinMembershipsAndRoles" Type="insideWordEntity.Store.JoinMembershipsAndRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="JoinMembershipsAndRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinPhotosAndArticles_Articles">
+          <End Role="Articles" Type="insideWordEntity.Store.Articles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinArticlesAndPhotos" Type="insideWordEntity.Store.JoinArticlesAndPhotos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="ArticleId" />
+            </Principal>
+            <Dependent Role="JoinArticlesAndPhotos">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinPhotosAndArticles_Photos">
+          <End Role="Photos" Type="insideWordEntity.Store.Photos" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinArticlesAndPhotos" Type="insideWordEntity.Store.JoinArticlesAndPhotos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Photos">
+              <PropertyRef Name="PhotoId" />
+            </Principal>
+            <Dependent Role="JoinArticlesAndPhotos">
+              <PropertyRef Name="PhotoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinPhotosAndMembers_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinMembersAndPhotos" Type="insideWordEntity.Store.JoinMembersAndPhotos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="JoinMembersAndPhotos">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinPhotosAndUsers_Photos">
+          <End Role="Photos" Type="insideWordEntity.Store.Photos" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinMembersAndPhotos" Type="insideWordEntity.Store.JoinMembersAndPhotos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Photos">
+              <PropertyRef Name="PhotoId" />
+            </Principal>
+            <Dependent Role="JoinMembersAndPhotos">
+              <PropertyRef Name="PhotoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinRolesAndPermissions_Permissions">
+          <End Role="Permissions" Type="insideWordEntity.Store.Permissions" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="JoinRolesAndPermissions" Type="insideWordEntity.Store.JoinRolesAndPermissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permissions">
+              <PropertyRef Name="PermissionId" />
+            </Principal>
+            <Dependent Role="JoinRolesAndPermissions">
+              <PropertyRef Name="PermissionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JoinRolesAndPermissions_Roles">
+          <End Role="Roles" Type="insideWordEntity.Store.Roles" Multiplicity="1" />
+          <End Role="JoinRolesAndPermissions" Type="insideWordEntity.Store.JoinRolesAndPermissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="JoinRolesAndPermissions">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Members_Photos">
+          <End Role="Photos" Type="insideWordEntity.Store.Photos" Multiplicity="0..1" />
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Photos">
+              <PropertyRef Name="PhotoId" />
+            </Principal>
+            <Dependent Role="Members">
+              <PropertyRef Name="PhotoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Memberships_Groups">
+          <End Role="Groups" Type="insideWordEntity.Store.Groups" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Memberships" Type="insideWordEntity.Store.Memberships" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GroupId" />
+            </Principal>
+            <Dependent Role="Memberships">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Memberships_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Memberships" Type="insideWordEntity.Store.Memberships" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="Memberships">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Permissions_Groups">
+          <End Role="Groups" Type="insideWordEntity.Store.Groups" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Permissions" Type="insideWordEntity.Store.Permissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GroupId" />
+            </Principal>
+            <Dependent Role="Permissions">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="0..1" />
+          <End Role="Photos" Type="insideWordEntity.Store.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Photos">
+          <End Role="Photos" Type="insideWordEntity.Store.Photos" Multiplicity="0..1" />
+          <End Role="Photos1" Type="insideWordEntity.Store.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Photos">
+              <PropertyRef Name="PhotoId" />
+            </Principal>
+            <Dependent Role="Photos1">
+              <PropertyRef Name="OriginalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhotoScores_Photos">
+          <End Role="Photos" Type="insideWordEntity.Store.Photos" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PhotoScores" Type="insideWordEntity.Store.PhotoScores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Photos">
+              <PropertyRef Name="PhotoId" />
+            </Principal>
+            <Dependent Role="PhotoScores">
+              <PropertyRef Name="PhotoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhotoVotes_Members">
+          <End Role="Members" Type="insideWordEntity.Store.Members" Multiplicity="0..1" />
+          <End Role="PhotoVotes" Type="insideWordEntity.Store.PhotoVotes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="PhotoVotes">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhotoVotes_Photos">
+          <End Role="Photos" Type="insideWordEntity.Store.Photos" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PhotoVotes" Type="insideWordEntity.Store.PhotoVotes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Photos">
+              <PropertyRef Name="PhotoId" />
+            </Principal>
+            <Dependent Role="PhotoVotes">
+              <PropertyRef Name="PhotoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Roles_Groups">
+          <End Role="Groups" Type="insideWordEntity.Store.Groups" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Roles" Type="insideWordEntity.Store.Roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="GroupId" />
+            </Principal>
+            <Dependent Role="Roles">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InsideWordModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="InsideWordEntities" annotation:LazyLoadingEnabled="true" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <EntitySet Name="Articles" EntityType="InsideWordModel.Article" />
+          <EntitySet Name="ArticleVotes" EntityType="InsideWordModel.ArticleVote" />
+          <EntitySet Name="Categories" EntityType="InsideWordModel.Category" />
+          <EntitySet Name="Comments" EntityType="InsideWordModel.Comment" />
+          <EntitySet Name="Conversations" EntityType="InsideWordModel.Conversation" />
+          <EntitySet Name="ConversationVotes" EntityType="InsideWordModel.ConversationVote" />
+          <EntitySet Name="Members" EntityType="InsideWordModel.Member" />
+          <EntitySet Name="Photos" EntityType="InsideWordModel.Photo" />
+          <EntitySet Name="PhotoVotes" EntityType="InsideWordModel.PhotoVote" />
+          <AssociationSet Name="FK_Articles_Members" Association="InsideWordModel.FK_Articles_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="Articles" EntitySet="Articles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleVotes_Articles" Association="InsideWordModel.FK_ArticleVotes_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="ArticleVotes" EntitySet="ArticleVotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Conversations_Articles" Association="InsideWordModel.FK_Conversations_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="Conversations" EntitySet="Conversations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleVotes_Members" Association="InsideWordModel.FK_ArticleVotes_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="ArticleVotes" EntitySet="ArticleVotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Categories_Categories" Association="InsideWordModel.FK_Categories_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Categories1" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_Members" Association="InsideWordModel.FK_Comments_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Conversations_Comments" Association="InsideWordModel.FK_Conversations_Comments">
+            <End Role="Conversations" EntitySet="Conversations" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Conversations_Author" Association="InsideWordModel.FK_Conversations_Author">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="Conversations" EntitySet="Conversations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Conversations_Photos" Association="InsideWordModel.FK_Conversations_Photos">
+            <End Role="Photos" EntitySet="Photos" />
+            <End Role="Conversations" EntitySet="Conversations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ConversationVotes_Conversations" Association="InsideWordModel.FK_ConversationVotes_Conversations">
+            <End Role="Conversations" EntitySet="Conversations" />
+            <End Role="ConversationVotes" EntitySet="ConversationVotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ConversationVotes_Members" Association="InsideWordModel.FK_ConversationVotes_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="ConversationVotes" EntitySet="ConversationVotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Members" Association="InsideWordModel.FK_Photos_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhotoVotes_Members" Association="InsideWordModel.FK_PhotoVotes_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="PhotoVotes" EntitySet="PhotoVotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhotoVotes_Photos" Association="InsideWordModel.FK_PhotoVotes_Photos">
+            <End Role="Photos" EntitySet="Photos" />
+            <End Role="PhotoVotes" EntitySet="PhotoVotes" />
+          </AssociationSet>
+          <AssociationSet Name="JoinArticlesAndCategories" Association="InsideWordModel.JoinArticlesAndCategories">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="Categories" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="JoinArticlesAndMembers" Association="InsideWordModel.JoinArticlesAndMembers">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="Members" EntitySet="Members" />
+          </AssociationSet>
+          <AssociationSet Name="JoinArticlesAndPhotos" Association="InsideWordModel.JoinArticlesAndPhotos">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="JoinMembersAndMembers" Association="InsideWordModel.JoinMembersAndMembers">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="Members1" EntitySet="Members" />
+          </AssociationSet>
+          <AssociationSet Name="JoinMembersAndPhotos" Association="InsideWordModel.JoinMembersAndPhotos">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <EntitySet Name="ArticleScores" EntityType="InsideWordModel.ArticleScore" />
+          <EntitySet Name="ConversationScores" EntityType="InsideWordModel.ConversationScore" />
+          <EntitySet Name="PhotoScores" EntityType="InsideWordModel.PhotoScore" />
+          <AssociationSet Name="FK_ArticleScores_Articles" Association="InsideWordModel.FK_ArticleScores_Articles">
+            <End Role="Article" EntitySet="Articles" />
+            <End Role="ArticleScore" EntitySet="ArticleScores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ConversationScores_Conversations" Association="InsideWordModel.FK_ConversationScores_Conversations">
+            <End Role="Conversation" EntitySet="Conversations" />
+            <End Role="ConversationScore" EntitySet="ConversationScores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhotoScores_Photos" Association="InsideWordModel.FK_PhotoScores_Photos">
+            <End Role="Photo" EntitySet="Photos" />
+            <End Role="PhotoScore" EntitySet="PhotoScores" />
+          </AssociationSet>
+          <EntitySet Name="Groups" EntityType="InsideWordModel.Group" />
+          <AssociationSet Name="FK_Members_Photos" Association="InsideWordModel.FK_Members_Photos">
+            <End Role="Photo" EntitySet="Photos" />
+            <End Role="Member" EntitySet="Members" />
+          </AssociationSet>
+          <EntitySet Name="Memberships" EntityType="InsideWordModel.Membership" />
+          <EntitySet Name="Roles" EntityType="InsideWordModel.Role" />
+          <AssociationSet Name="FK_Memberships_Groups" Association="InsideWordModel.FK_Memberships_Groups">
+            <End Role="Group" EntitySet="Groups" />
+            <End Role="Membership" EntitySet="Memberships" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Roles_Groups" Association="InsideWordModel.FK_Roles_Groups">
+            <End Role="Group" EntitySet="Groups" />
+            <End Role="Role" EntitySet="Roles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Memberships_Members" Association="InsideWordModel.FK_Memberships_Members">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="Membership" EntitySet="Memberships" />
+          </AssociationSet>
+          <AssociationSet Name="JoinMembershipsAndRoles" Association="InsideWordModel.JoinMembershipsAndRoles">
+            <End Role="Membership" EntitySet="Memberships" />
+            <End Role="Role" EntitySet="Roles" />
+          </AssociationSet>
+          <EntitySet Name="AlternateMemberIds" EntityType="InsideWordModel.AlternateMemberId" />
+          <EntitySet Name="Permissions" EntityType="InsideWordModel.Permission" />
+          <AssociationSet Name="FK_AlternateMemberIds_Members" Association="InsideWordModel.FK_AlternateMemberIds_Members">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="AlternateMemberId" EntitySet="AlternateMemberIds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Permissions_Groups" Association="InsideWordModel.FK_Permissions_Groups">
+            <End Role="Group" EntitySet="Groups" />
+            <End Role="Permission" EntitySet="Permissions" />
+          </AssociationSet>
+          <AssociationSet Name="JoinRolesAndPermissions" Association="InsideWordModel.JoinRolesAndPermissions">
+            <End Role="Permission" EntitySet="Permissions" />
+            <End Role="Role" EntitySet="Roles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_Photos" Association="InsideWordModel.FK_Photos_Photos">
+            <End Role="Photo" EntitySet="Photos" />
+            <End Role="Photo1" EntitySet="Photos" />
+          </AssociationSet>
+          <EntitySet Name="AlternateArticleIds" EntityType="InsideWordModel.AlternateArticleId" />
+          <AssociationSet Name="FK_AlternateArticleIds_Articles" Association="InsideWordModel.FK_AlternateArticleIds_Articles">
+            <End Role="Article" EntitySet="Articles" />
+            <End Role="AlternateArticleId" EntitySet="AlternateArticleIds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlternateArticleIds_Members" Association="InsideWordModel.FK_AlternateArticleIds_Members">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="AlternateArticleId" EntitySet="AlternateArticleIds" />
+          </AssociationSet>
+          <EntitySet Name="InsideWordSettings" EntityType="InsideWordModel.InsideWordSetting" />
+          <EntitySet Name="ArticleTexts" EntityType="InsideWordModel.ArticleText" />
+          <AssociationSet Name="FK_ArticleTexts_Articles" Association="InsideWordModel.FK_ArticleTexts_Articles">
+            <End Role="Article" EntitySet="Articles" />
+            <End Role="ArticleText" EntitySet="ArticleTexts" />
+          </AssociationSet>
+          <EntitySet Name="AlternateCategoryIds" EntityType="InsideWordModel.AlternateCategoryId" />
+          <AssociationSet Name="FK_AlternateCategoryIds_AlternateCategoryIds" Association="InsideWordModel.FK_AlternateCategoryIds_AlternateCategoryIds">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="AlternateCategoryId" EntitySet="AlternateCategoryIds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlternateCategoryIds_Members" Association="InsideWordModel.FK_AlternateCategoryIds_Members">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="AlternateCategoryId" EntitySet="AlternateCategoryIds" />
+          </AssociationSet>
+          <AssociationSet Name="JoinArticlesAndAlternateCategories" Association="InsideWordModel.JoinArticlesAndAlternateCategories">
+            <End Role="AlternateCategoryId" EntitySet="AlternateCategoryIds" />
+            <End Role="Article" EntitySet="Articles" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EditDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="MemberId" Type="Int64" />
+          <Property Name="Blurb" Type="String" Nullable="true" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Member" Relationship="InsideWordModel.FK_Articles_Members" FromRole="Articles" ToRole="Members" />
+          <NavigationProperty Name="ArticleVotes" Relationship="InsideWordModel.FK_ArticleVotes_Articles" FromRole="Articles" ToRole="ArticleVotes" />
+          <NavigationProperty Name="Conversations" Relationship="InsideWordModel.FK_Conversations_Articles" FromRole="Articles" ToRole="Conversations" />
+          <NavigationProperty Name="Categories" Relationship="InsideWordModel.JoinArticlesAndCategories" FromRole="Articles" ToRole="Categories" />
+          <NavigationProperty Name="Followers" Relationship="InsideWordModel.JoinArticlesAndMembers" FromRole="Articles" ToRole="Members" />
+          <NavigationProperty Name="Photos" Relationship="InsideWordModel.JoinArticlesAndPhotos" FromRole="Articles" ToRole="Photos" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <NavigationProperty Name="ArticleScores" Relationship="InsideWordModel.FK_ArticleScores_Articles" FromRole="Article" ToRole="ArticleScore" />
+          <Property Type="Int32" Name="ReadCount" Nullable="false" />
+          <Property Type="Boolean" Name="IgnoreFlags" Nullable="false" />
+          <Property Type="Boolean" Name="IsPublished" Nullable="false" />
+          <Property Type="Boolean" Name="BlurbIsAutoGen" Nullable="false" />
+          <NavigationProperty Name="AlternateArticleIds" Relationship="InsideWordModel.FK_AlternateArticleIds_Articles" FromRole="Article" ToRole="AlternateArticleId" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ArticleTexts" Relationship="InsideWordModel.FK_ArticleTexts_Articles" FromRole="Article" ToRole="ArticleText" />
+          <NavigationProperty Name="AlternateCategoryIds" Relationship="InsideWordModel.JoinArticlesAndAlternateCategories" FromRole="Article" ToRole="AlternateCategoryId" />
+        </EntityType>
+        <EntityType Name="ArticleVote">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ArticleId" Type="Int64" Nullable="false" />
+          <Property Name="MemberId" Type="Int64" />
+          <Property Name="IsFlag" Type="Boolean" Nullable="false" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Article" Relationship="InsideWordModel.FK_ArticleVotes_Articles" FromRole="ArticleVotes" ToRole="Articles" />
+          <NavigationProperty Name="Member" Relationship="InsideWordModel.FK_ArticleVotes_Members" FromRole="ArticleVotes" ToRole="Members" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="Boolean" Name="IsShadowVote" Nullable="false" />
+          <Property Type="Int32" Name="VoteWeight" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EditDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ParentCategoryId" Type="Int64" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+          <Property Name="HierarchyLevel" Type="Int32" Nullable="false" />
+          <Property Name="FullPath" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Children" Relationship="InsideWordModel.FK_Categories_Categories" FromRole="Categories" ToRole="Categories1" />
+          <NavigationProperty Name="ParentCategory" Relationship="InsideWordModel.FK_Categories_Categories" FromRole="Categories1" ToRole="Categories" />
+          <NavigationProperty Name="Articles" Relationship="InsideWordModel.JoinArticlesAndCategories" FromRole="Categories" ToRole="Articles" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <NavigationProperty Name="AlternateCategoryIds" Relationship="InsideWordModel.FK_AlternateCategoryIds_AlternateCategoryIds" FromRole="Category" ToRole="AlternateCategoryId" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConversationId" Type="Int64" Nullable="false" />
+          <Property Name="EditDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="MemberId" Type="Int64" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+          <Property Name="IsFlagged" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Member" Relationship="InsideWordModel.FK_Comments_Members" FromRole="Comments" ToRole="Members" />
+          <NavigationProperty Name="Conversation" Relationship="InsideWordModel.FK_Conversations_Comments" FromRole="Comments" ToRole="Conversations" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="Boolean" Name="IgnoreFlags" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Conversation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EditDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ArticleId" Type="Int64" />
+          <Property Name="PhotoId" Type="Int64" />
+          <Property Name="MemberId" Type="Int64" />
+          <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Article" Relationship="InsideWordModel.FK_Conversations_Articles" FromRole="Conversations" ToRole="Articles" />
+          <NavigationProperty Name="Comments" Relationship="InsideWordModel.FK_Conversations_Comments" FromRole="Conversations" ToRole="Comments" />
+          <NavigationProperty Name="Member" Relationship="InsideWordModel.FK_Conversations_Author" FromRole="Conversations" ToRole="Members" />
+          <NavigationProperty Name="Photo" Relationship="InsideWordModel.FK_Conversations_Photos" FromRole="Conversations" ToRole="Photos" />
+          <NavigationProperty Name="ConversationVotes" Relationship="InsideWordModel.FK_ConversationVotes_Conversations" FromRole="Conversations" ToRole="ConversationVotes" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <NavigationProperty Name="ConversationScores" Relationship="InsideWordModel.FK_ConversationScores_Conversations" FromRole="Conversation" ToRole="ConversationScore" />
+        </EntityType>
+        <EntityType Name="ConversationVote">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConversationId" Type="Int64" Nullable="false" />
+          <Property Name="MemberId" Type="Int64" />
+          <Property Name="IsFlag" Type="Boolean" Nullable="false" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Conversation" Relationship="InsideWordModel.FK_ConversationVotes_Conversations" FromRole="ConversationVotes" ToRole="Conversations" />
+          <NavigationProperty Name="Member" Relationship="InsideWordModel.FK_ConversationVotes_Members" FromRole="ConversationVotes" ToRole="Members" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="Boolean" Name="IsShadowVote" Nullable="false" />
+          <Property Type="Int32" Name="VoteWeight" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EditDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="true" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="IsSuperAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="IsMasterAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="IsUserAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="IsCategoryAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="IsBanned" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="PostedArticles" Relationship="InsideWordModel.FK_Articles_Members" FromRole="Members" ToRole="Articles" />
+          <NavigationProperty Name="ArticleVotes" Relationship="InsideWordModel.FK_ArticleVotes_Members" FromRole="Members" ToRole="ArticleVotes" />
+          <NavigationProperty Name="PostedComments" Relationship="InsideWordModel.FK_Comments_Members" FromRole="Members" ToRole="Comments" />
+          <NavigationProperty Name="PostedConversations" Relationship="InsideWordModel.FK_Conversations_Author" FromRole="Members" ToRole="Conversations" />
+          <NavigationProperty Name="ConversationVotes" Relationship="InsideWordModel.FK_ConversationVotes_Members" FromRole="Members" ToRole="ConversationVotes" />
+          <NavigationProperty Name="PostedPhotos" Relationship="InsideWordModel.FK_Photos_Members" FromRole="Members" ToRole="Photos" />
+          <NavigationProperty Name="PhotoVotes" Relationship="InsideWordModel.FK_PhotoVotes_Members" FromRole="Members" ToRole="PhotoVotes" />
+          <NavigationProperty Name="FavoriteArticles" Relationship="InsideWordModel.JoinArticlesAndMembers" FromRole="Members" ToRole="Articles" />
+          <NavigationProperty Name="FromMembers" Relationship="InsideWordModel.JoinMembersAndMembers" FromRole="Members" ToRole="Members1" />
+          <NavigationProperty Name="ToMembers" Relationship="InsideWordModel.JoinMembersAndMembers" FromRole="Members1" ToRole="Members" />
+          <NavigationProperty Name="FavoritePhotos" Relationship="InsideWordModel.JoinMembersAndPhotos" FromRole="Members" ToRole="Photos" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="Boolean" Name="IsArticleAdmin" Nullable="false" />
+          <Property Type="Int64" Name="PhotoId" />
+          <Property Type="String" Name="Bio" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ProfilePhoto" Relationship="InsideWordModel.FK_Members_Photos" FromRole="Member" ToRole="Photo" />
+          <NavigationProperty Name="Memberships" Relationship="InsideWordModel.FK_Memberships_Members" FromRole="Member" ToRole="Membership" />
+          <NavigationProperty Name="AlternateMemberIds" Relationship="InsideWordModel.FK_AlternateMemberIds_Members" FromRole="Member" ToRole="AlternateMemberId" />
+          <NavigationProperty Name="AlternateArticleIds" Relationship="InsideWordModel.FK_AlternateArticleIds_Members" FromRole="Member" ToRole="AlternateArticleId" />
+          <NavigationProperty Name="AlternateCategoryIds" Relationship="InsideWordModel.FK_AlternateCategoryIds_Members" FromRole="Member" ToRole="AlternateCategoryId" />
+        </EntityType>
+        <EntityType Name="Photo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EditDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ImageUrl" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Photographer" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="MemberId" Type="Int64" />
+          <Property Name="Caption" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Conversations" Relationship="InsideWordModel.FK_Conversations_Photos" FromRole="Photos" ToRole="Conversations" />
+          <NavigationProperty Name="Member" Relationship="InsideWordModel.FK_Photos_Members" FromRole="Photos" ToRole="Members" />
+          <NavigationProperty Name="PhotoVotes" Relationship="InsideWordModel.FK_PhotoVotes_Photos" FromRole="Photos" ToRole="PhotoVotes" />
+          <NavigationProperty Name="Articles" Relationship="InsideWordModel.JoinArticlesAndPhotos" FromRole="Photos" ToRole="Articles" />
+          <NavigationProperty Name="Followers" Relationship="InsideWordModel.JoinMembersAndPhotos" FromRole="Photos" ToRole="Members" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <NavigationProperty Name="PhotoScores" Relationship="InsideWordModel.FK_PhotoScores_Photos" FromRole="Photo" ToRole="PhotoScore" />
+          <Property Type="String" Name="PhysicalPath" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IgnoreFlags" Nullable="false" />
+          <NavigationProperty Name="Members" Relationship="InsideWordModel.FK_Members_Photos" FromRole="Photo" ToRole="Member" />
+          <Property Type="Boolean" Name="IsThumbnail" Nullable="false" />
+          <Property Type="Int32" Name="ImageType" Nullable="false" />
+          <Property Type="Int64" Name="OriginalId" />
+          <NavigationProperty Name="Thumbnails" Relationship="InsideWordModel.FK_Photos_Photos" FromRole="Photo" ToRole="Photo1" />
+          <NavigationProperty Name="OriginalPhoto" Relationship="InsideWordModel.FK_Photos_Photos" FromRole="Photo1" ToRole="Photo" />
+          <Property Type="Int16" Name="DisplayWidth" />
+          <Property Type="Int16" Name="DisplayHeight" />
+        </EntityType>
+        <EntityType Name="PhotoVote">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PhotoId" Type="Int64" Nullable="false" />
+          <Property Name="MemberId" Type="Int64" />
+          <Property Name="IsFlag" Type="Boolean" Nullable="false" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Member" Relationship="InsideWordModel.FK_PhotoVotes_Members" FromRole="PhotoVotes" ToRole="Members" />
+          <NavigationProperty Name="Photo" Relationship="InsideWordModel.FK_PhotoVotes_Photos" FromRole="PhotoVotes" ToRole="Photos" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="Boolean" Name="IsShadowVote" Nullable="false" />
+          <Property Type="Int32" Name="VoteWeight" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Articles_Members">
+          <End Role="Members" Type="InsideWordModel.Member" Multiplicity="0..1" />
+          <End Role="Articles" Type="InsideWordModel.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Articles">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleVotes_Articles">
+          <End Role="Articles" Type="InsideWordModel.Article" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ArticleVotes" Type="InsideWordModel.ArticleVote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleVotes">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Conversations_Articles">
+          <End Role="Articles" Type="InsideWordModel.Article" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Conversations" Type="InsideWordModel.Conversation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Conversations">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleVotes_Members">
+          <End Role="Members" Type="InsideWordModel.Member" Multiplicity="0..1" />
+          <End Role="ArticleVotes" Type="InsideWordModel.ArticleVote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleVotes">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Categories_Categories">
+          <End Role="Categories" Type="InsideWordModel.Category" Multiplicity="0..1" />
+          <End Role="Categories1" Type="InsideWordModel.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Categories1">
+              <PropertyRef Name="ParentCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_Members">
+          <End Role="Members" Type="InsideWordModel.Member" Multiplicity="0..1" />
+          <End Role="Comments" Type="InsideWordModel.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Conversations_Comments">
+          <End Role="Conversations" Type="InsideWordModel.Conversation" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Comments" Type="InsideWordModel.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conversations">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="ConversationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Conversations_Author">
+          <End Role="Members" Type="InsideWordModel.Member" Multiplicity="0..1" />
+          <End Role="Conversations" Type="InsideWordModel.Conversation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Conversations">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Conversations_Photos">
+          <End Role="Photos" Type="InsideWordModel.Photo" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Conversations" Type="InsideWordModel.Conversation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Photos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Conversations">
+              <PropertyRef Name="PhotoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ConversationVotes_Conversations">
+          <End Role="Conversations" Type="InsideWordModel.Conversation" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ConversationVotes" Type="InsideWordModel.ConversationVote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conversations">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ConversationVotes">
+              <PropertyRef Name="ConversationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ConversationVotes_Members">
+          <End Role="Members" Type="InsideWordModel.Member" Multiplicity="0..1" />
+          <End Role="ConversationVotes" Type="InsideWordModel.ConversationVote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ConversationVotes">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_Members">
+          <End Role="Members" Type="InsideWordModel.Member" Multiplicity="0..1" />
+          <End Role="Photos" Type="InsideWordModel.Photo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhotoVotes_Members">
+          <End Role="Members" Type="InsideWordModel.Member" Multiplicity="0..1" />
+          <End Role="PhotoVotes" Type="InsideWordModel.PhotoVote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PhotoVotes">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhotoVotes_Photos">
+          <End Role="Photos" Type="InsideWordModel.Photo" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PhotoVotes" Type="InsideWordModel.PhotoVote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Photos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PhotoVotes">
+              <PropertyRef Name="PhotoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JoinArticlesAndCategories">
+          <End Role="Articles" Type="InsideWordModel.Article" Multiplicity="*" />
+          <End Role="Categories" Type="InsideWordModel.Category" Multiplicity="*" />
+        </Association>
+        <Association Name="JoinArticlesAndMembers">
+          <End Role="Articles" Type="InsideWordModel.Article" Multiplicity="*" />
+          <End Role="Members" Type="InsideWordModel.Member" Multiplicity="*" />
+        </Association>
+        <Association Name="JoinArticlesAndPhotos">
+          <End Role="Articles" Type="InsideWordModel.Article" Multiplicity="*" />
+          <End Role="Photos" Type="InsideWordModel.Photo" Multiplicity="*" />
+        </Association>
+        <Association Name="JoinMembersAndMembers">
+          <End Role="Members" Type="InsideWordModel.Member" Multiplicity="*" />
+          <End Role="Members1" Type="InsideWordModel.Member" Multiplicity="*" />
+        </Association>
+        <Association Name="JoinMembersAndPhotos">
+          <End Role="Members" Type="InsideWordModel.Member" Multiplicity="*" />
+          <End Role="Photos" Type="InsideWordModel.Photo" Multiplicity="*" />
+        </Association>
+        <EntityType Name="ArticleScore">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="Int64" Name="ArticleId" Nullable="false" />
+          <Property Type="Double" Name="Score" Nullable="false" />
+          <NavigationProperty Name="Article" Relationship="InsideWordModel.FK_ArticleScores_Articles" FromRole="ArticleScore" ToRole="Article" />
+          <Property Type="Int32" Name="ScoreType" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ConversationScore">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="Int64" Name="ConversationId" Nullable="false" />
+          <Property Type="Double" Name="Score" Nullable="false" />
+          <NavigationProperty Name="Conversation" Relationship="InsideWordModel.FK_ConversationScores_Conversations" FromRole="ConversationScore" ToRole="Conversation" />
+        </EntityType>
+        <EntityType Name="PhotoScore">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="Int64" Name="PhotoId" Nullable="false" />
+          <Property Type="Double" Name="Score" Nullable="false" />
+          <NavigationProperty Name="Photo" Relationship="InsideWordModel.FK_PhotoScores_Photos" FromRole="PhotoScore" ToRole="Photo" />
+        </EntityType>
+        <Association Name="FK_ArticleScores_Articles">
+          <End Type="InsideWordModel.Article" Role="Article" Multiplicity="1" />
+          <End Type="InsideWordModel.ArticleScore" Role="ArticleScore" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleScore">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ConversationScores_Conversations">
+          <End Type="InsideWordModel.Conversation" Role="Conversation" Multiplicity="1" />
+          <End Type="InsideWordModel.ConversationScore" Role="ConversationScore" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conversation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ConversationScore">
+              <PropertyRef Name="ConversationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhotoScores_Photos">
+          <End Type="InsideWordModel.Photo" Role="Photo" Multiplicity="1" />
+          <End Type="InsideWordModel.PhotoScore" Role="PhotoScore" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Photo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PhotoScore">
+              <PropertyRef Name="PhotoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="EditDate" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsHidden" Nullable="false" />
+          <Property Type="Boolean" Name="IsBanned" Nullable="false" />
+          <NavigationProperty Name="Memberships" Relationship="InsideWordModel.FK_Memberships_Groups" FromRole="Group" ToRole="Membership" />
+          <NavigationProperty Name="Roles" Relationship="InsideWordModel.FK_Roles_Groups" FromRole="Group" ToRole="Role" />
+          <NavigationProperty Name="Permissions" Relationship="InsideWordModel.FK_Permissions_Groups" FromRole="Group" ToRole="Permission" />
+        </EntityType>
+        <Association Name="FK_Members_Photos">
+          <End Type="InsideWordModel.Photo" Role="Photo" Multiplicity="0..1" />
+          <End Type="InsideWordModel.Member" Role="Member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Photo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="PhotoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Membership">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="GroupId" Nullable="false" />
+          <Property Type="Int64" Name="MemberId" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="EditDate" Nullable="false" />
+          <NavigationProperty Name="Group" Relationship="InsideWordModel.FK_Memberships_Groups" FromRole="Membership" ToRole="Group" />
+          <NavigationProperty Name="Member" Relationship="InsideWordModel.FK_Memberships_Members" FromRole="Membership" ToRole="Member" />
+          <NavigationProperty Name="Roles" Relationship="InsideWordModel.JoinMembershipsAndRoles" FromRole="Membership" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="Int64" Name="GroupId" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Group" Relationship="InsideWordModel.FK_Roles_Groups" FromRole="Role" ToRole="Group" />
+          <NavigationProperty Name="Memberships" Relationship="InsideWordModel.JoinMembershipsAndRoles" FromRole="Role" ToRole="Membership" />
+          <NavigationProperty Name="Permissions" Relationship="InsideWordModel.JoinRolesAndPermissions" FromRole="Role" ToRole="Permission" />
+        </EntityType>
+        <Association Name="FK_Memberships_Groups">
+          <End Type="InsideWordModel.Group" Role="Group" Multiplicity="1" />
+          <End Type="InsideWordModel.Membership" Role="Membership" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Membership">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Roles_Groups">
+          <End Type="InsideWordModel.Group" Role="Group" Multiplicity="0..1" />
+          <End Type="InsideWordModel.Role" Role="Role" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Role">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Memberships_Members">
+          <End Type="InsideWordModel.Member" Role="Member" Multiplicity="1" />
+          <End Type="InsideWordModel.Membership" Role="Membership" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Membership">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JoinMembershipsAndRoles">
+          <End Type="InsideWordModel.Membership" Role="Membership" Multiplicity="*" />
+          <End Type="InsideWordModel.Role" Role="Role" Multiplicity="*" />
+        </Association>
+        <EntityType Name="AlternateMemberId">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="Int64" Name="MemberId" Nullable="false" />
+          <Property Type="Int32" Name="AlternateType" Nullable="false" />
+          <Property Type="String" Name="AlternateId" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsValidated" Nullable="false" />
+          <Property Type="Boolean" Name="IsNonce" Nullable="false" />
+          <Property Type="DateTime" Name="ExpiryDate" />
+          <NavigationProperty Name="Member" Relationship="InsideWordModel.FK_AlternateMemberIds_Members" FromRole="AlternateMemberId" ToRole="Member" />
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="EditDate" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="Boolean" Name="UsePassword" Nullable="false" />
+          <Property Type="Boolean" Name="IsHidden" Nullable="false" />
+          <Property Type="Int64" Name="LoginCount" Nullable="false" />
+          <Property Type="String" Name="Data" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsHashed" Nullable="false" />
+          <Property Type="String" Name="DisplayName" MaxLength="64" FixedLength="false" Unicode="true" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Permission">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="Int64" Name="GroupId" />
+          <Property Type="Int64" Name="ObjectTypeId" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="CanCreate" Nullable="false" />
+          <Property Type="Boolean" Name="CanEdit" Nullable="false" />
+          <Property Type="Boolean" Name="CanRead" Nullable="false" />
+          <Property Type="Boolean" Name="CanDelete" Nullable="false" />
+          <NavigationProperty Name="Group" Relationship="InsideWordModel.FK_Permissions_Groups" FromRole="Permission" ToRole="Group" />
+          <NavigationProperty Name="Roles" Relationship="InsideWordModel.JoinRolesAndPermissions" FromRole="Permission" ToRole="Role" />
+        </EntityType>
+        <Association Name="FK_AlternateMemberIds_Members">
+          <End Type="InsideWordModel.Member" Role="Member" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="InsideWordModel.AlternateMemberId" Role="AlternateMemberId" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AlternateMemberId">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Permissions_Groups">
+          <End Type="InsideWordModel.Group" Role="Group" Multiplicity="0..1" />
+          <End Type="InsideWordModel.Permission" Role="Permission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Permission">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JoinRolesAndPermissions">
+          <End Type="InsideWordModel.Permission" Role="Permission" Multiplicity="*" />
+          <End Type="InsideWordModel.Role" Role="Role" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Photos_Photos">
+          <End Type="InsideWordModel.Photo" Role="Photo" Multiplicity="0..1" />
+          <End Type="InsideWordModel.Photo" Role="Photo1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Photo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Photo1">
+              <PropertyRef Name="OriginalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AlternateArticleId">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="Int64" Name="ArticleId" Nullable="false" />
+          <Property Type="Int64" Name="MemberId" Nullable="false" />
+          <Property Type="String" Name="AlternateId" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Article" Relationship="InsideWordModel.FK_AlternateArticleIds_Articles" FromRole="AlternateArticleId" ToRole="Article" />
+          <NavigationProperty Name="Member" Relationship="InsideWordModel.FK_AlternateArticleIds_Members" FromRole="AlternateArticleId" ToRole="Member" />
+        </EntityType>
+        <Association Name="FK_AlternateArticleIds_Articles">
+          <End Type="InsideWordModel.Article" Role="Article" Multiplicity="1" />
+          <End Type="InsideWordModel.AlternateArticleId" Role="AlternateArticleId" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AlternateArticleId">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlternateArticleIds_Members">
+          <End Type="InsideWordModel.Member" Role="Member" Multiplicity="1" />
+          <End Type="InsideWordModel.AlternateArticleId" Role="AlternateArticleId" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AlternateArticleId">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="InsideWordSetting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="String" Name="SettingKey" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SettingValue" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ArticleText">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="ArticleId" Nullable="false" />
+          <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Article" Relationship="InsideWordModel.FK_ArticleTexts_Articles" FromRole="ArticleText" ToRole="Article" />
+          <Property Type="Int32" Name="TextType" Nullable="false" />
+          <Property Type="Int32" Name="Version" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ArticleTexts_Articles">
+          <End Type="InsideWordModel.Article" Role="Article" Multiplicity="1" />
+          <End Type="InsideWordModel.ArticleText" Role="ArticleText" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleText">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AlternateCategoryId">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="SystemCreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="SystemEditDate" Nullable="false" />
+          <Property Type="Int64" Name="CategoryId" />
+          <Property Type="Int64" Name="MemberId" Nullable="false" />
+          <Property Type="Int64" Name="AlternateId" Nullable="false" />
+          <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Category" Relationship="InsideWordModel.FK_AlternateCategoryIds_AlternateCategoryIds" FromRole="AlternateCategoryId" ToRole="Category" />
+          <NavigationProperty Name="Member" Relationship="InsideWordModel.FK_AlternateCategoryIds_Members" FromRole="AlternateCategoryId" ToRole="Member" />
+          <Property Type="Boolean" Name="OverrideFlag" Nullable="false" />
+          <NavigationProperty Name="Articles" Relationship="InsideWordModel.JoinArticlesAndAlternateCategories" FromRole="AlternateCategoryId" ToRole="Article" />
+        </EntityType>
+        <Association Name="FK_AlternateCategoryIds_AlternateCategoryIds">
+          <End Type="InsideWordModel.Category" Role="Category" Multiplicity="0..1" />
+          <End Type="InsideWordModel.AlternateCategoryId" Role="AlternateCategoryId" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AlternateCategoryId">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlternateCategoryIds_Members">
+          <End Type="InsideWordModel.Member" Role="Member" Multiplicity="1" />
+          <End Type="InsideWordModel.AlternateCategoryId" Role="AlternateCategoryId" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AlternateCategoryId">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JoinArticlesAndAlternateCategories">
+          <End Type="InsideWordModel.AlternateCategoryId" Role="AlternateCategoryId" Multiplicity="*" />
+          <End Type="InsideWordModel.Article" Role="Article" Multiplicity="*" />
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="insideWordEntityStoreContainer" CdmEntityContainer="InsideWordEntities">
+          <EntitySetMapping Name="Articles"><EntityTypeMapping TypeName="InsideWordModel.Article"><MappingFragment StoreEntitySet="Articles">
+            <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="BlurbIsAutoGen" ColumnName="BlurbIsAutoGen" />
+                <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+                <ScalarProperty Name="IgnoreFlags" ColumnName="IgnoreFlags" />
+                <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="Id" ColumnName="ArticleId" />
+            <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+            <ScalarProperty Name="Blurb" ColumnName="Blurb" />
+            <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ArticleVotes"><EntityTypeMapping TypeName="InsideWordModel.ArticleVote"><MappingFragment StoreEntitySet="ArticleVotes">
+            <ScalarProperty Name="VoteWeight" ColumnName="VoteWeight" />
+                <ScalarProperty Name="IsShadowVote" ColumnName="IsShadowVote" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="Id" ColumnName="ArticleVoteId" />
+            <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+            <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+            <ScalarProperty Name="IsFlag" ColumnName="IsFlag" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Categories"><EntityTypeMapping TypeName="InsideWordModel.Category"><MappingFragment StoreEntitySet="Categories">
+            <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="Id" ColumnName="CategoryId" />
+            <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="ParentCategoryId" ColumnName="ParentCategoryId" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+            <ScalarProperty Name="HierarchyLevel" ColumnName="HierarchyLevel" />
+            <ScalarProperty Name="FullPath" ColumnName="FullPath" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Comments"><EntityTypeMapping TypeName="InsideWordModel.Comment"><MappingFragment StoreEntitySet="Comments">
+            <ScalarProperty Name="IgnoreFlags" ColumnName="IgnoreFlags" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="Id" ColumnName="CommentId" />
+            <ScalarProperty Name="ConversationId" ColumnName="ConversationId" />
+            <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+            <ScalarProperty Name="IsFlagged" ColumnName="IsFlagged" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Conversations"><EntityTypeMapping TypeName="InsideWordModel.Conversation"><MappingFragment StoreEntitySet="Conversations">
+            <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="Id" ColumnName="ConversationId" />
+            <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+            <ScalarProperty Name="PhotoId" ColumnName="PhotoId" />
+            <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+            <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ConversationVotes"><EntityTypeMapping TypeName="InsideWordModel.ConversationVote"><MappingFragment StoreEntitySet="ConversationVotes">
+            <ScalarProperty Name="VoteWeight" ColumnName="VoteWeight" />
+                <ScalarProperty Name="IsShadowVote" ColumnName="IsShadowVote" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="Id" ColumnName="ConversationVoteId" />
+            <ScalarProperty Name="ConversationId" ColumnName="ConversationId" />
+            <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+            <ScalarProperty Name="IsFlag" ColumnName="IsFlag" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Members"><EntityTypeMapping TypeName="InsideWordModel.Member"><MappingFragment StoreEntitySet="Members">
+                <ScalarProperty Name="Bio" ColumnName="Bio" />
+                <ScalarProperty Name="PhotoId" ColumnName="PhotoId" />
+                <ScalarProperty Name="IsArticleAdmin" ColumnName="IsArticleAdmin" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="Id" ColumnName="MemberId" />
+            <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+            <ScalarProperty Name="IsSuperAdmin" ColumnName="IsSuperAdmin" />
+            <ScalarProperty Name="IsMasterAdmin" ColumnName="IsMasterAdmin" />
+            <ScalarProperty Name="IsUserAdmin" ColumnName="IsUserAdmin" />
+            <ScalarProperty Name="IsCategoryAdmin" ColumnName="IsCategoryAdmin" />
+            <ScalarProperty Name="IsBanned" ColumnName="IsBanned" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Photos"><EntityTypeMapping TypeName="InsideWordModel.Photo"><MappingFragment StoreEntitySet="Photos">
+                <ScalarProperty Name="DisplayHeight" ColumnName="DisplayHeight" />
+                <ScalarProperty Name="DisplayWidth" ColumnName="DisplayWidth" />
+                <ScalarProperty Name="OriginalId" ColumnName="OriginalId" />
+                <ScalarProperty Name="ImageType" ColumnName="ImageType" />
+                <ScalarProperty Name="IsThumbnail" ColumnName="IsThumbnail" />
+                <ScalarProperty Name="IgnoreFlags" ColumnName="IgnoreFlags" />
+                <ScalarProperty Name="PhysicalPath" ColumnName="PhysicalPath" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="Id" ColumnName="PhotoId" />
+            <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+            <ScalarProperty Name="Photographer" ColumnName="Photographer" />
+            <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+            <ScalarProperty Name="Caption" ColumnName="Caption" />
+            <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PhotoVotes"><EntityTypeMapping TypeName="InsideWordModel.PhotoVote"><MappingFragment StoreEntitySet="PhotoVotes">
+            <ScalarProperty Name="VoteWeight" ColumnName="VoteWeight" />
+                <ScalarProperty Name="IsShadowVote" ColumnName="IsShadowVote" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="Id" ColumnName="PhotoVoteId" />
+            <ScalarProperty Name="PhotoId" ColumnName="PhotoId" />
+            <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+            <ScalarProperty Name="IsFlag" ColumnName="IsFlag" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="JoinArticlesAndCategories" TypeName="InsideWordModel.JoinArticlesAndCategories" StoreEntitySet="JoinArticlesAndCategories">
+            <EndProperty Name="Articles">
+              <ScalarProperty Name="Id" ColumnName="ArticleId" />
+            </EndProperty>
+            <EndProperty Name="Categories">
+              <ScalarProperty Name="Id" ColumnName="CategoryId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="JoinArticlesAndMembers" TypeName="InsideWordModel.JoinArticlesAndMembers" StoreEntitySet="JoinArticlesAndMembers">
+            <EndProperty Name="Articles">
+              <ScalarProperty Name="Id" ColumnName="ArticleId" />
+            </EndProperty>
+            <EndProperty Name="Members">
+              <ScalarProperty Name="Id" ColumnName="MemberId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="JoinArticlesAndPhotos" TypeName="InsideWordModel.JoinArticlesAndPhotos" StoreEntitySet="JoinArticlesAndPhotos">
+            <EndProperty Name="Articles">
+              <ScalarProperty Name="Id" ColumnName="ArticleId" />
+            </EndProperty>
+            <EndProperty Name="Photos">
+              <ScalarProperty Name="Id" ColumnName="PhotoId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="JoinMembersAndMembers" TypeName="InsideWordModel.JoinMembersAndMembers" StoreEntitySet="JoinMembersAndMembers">
+            <EndProperty Name="Members">
+              <ScalarProperty Name="Id" ColumnName="FromMemberId" />
+            </EndProperty>
+            <EndProperty Name="Members1">
+              <ScalarProperty Name="Id" ColumnName="ToMemberId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="JoinMembersAndPhotos" TypeName="InsideWordModel.JoinMembersAndPhotos" StoreEntitySet="JoinMembersAndPhotos">
+            <EndProperty Name="Members">
+              <ScalarProperty Name="Id" ColumnName="MemberId" />
+            </EndProperty>
+            <EndProperty Name="Photos">
+              <ScalarProperty Name="Id" ColumnName="PhotoId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="ArticleScores">
+            <EntityTypeMapping TypeName="InsideWordModel.ArticleScore">
+              <MappingFragment StoreEntitySet="ArticleScores">
+                <ScalarProperty Name="ScoreType" ColumnName="ScoreType" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="Id" ColumnName="ArticleScoreId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConversationScores">
+            <EntityTypeMapping TypeName="InsideWordModel.ConversationScore">
+              <MappingFragment StoreEntitySet="ConversationScores">
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="ConversationId" ColumnName="ConversationId" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="Id" ColumnName="ConversationScoreId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhotoScores">
+            <EntityTypeMapping TypeName="InsideWordModel.PhotoScore">
+              <MappingFragment StoreEntitySet="PhotoScores">
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="PhotoId" ColumnName="PhotoId" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="Id" ColumnName="PhotoScoreId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Groups">
+            <EntityTypeMapping TypeName="InsideWordModel.Group">
+              <MappingFragment StoreEntitySet="Groups">
+                <ScalarProperty Name="IsBanned" ColumnName="IsBanned" />
+                <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="Id" ColumnName="GroupId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Memberships">
+            <EntityTypeMapping TypeName="InsideWordModel.Membership">
+              <MappingFragment StoreEntitySet="Memberships">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="Id" ColumnName="MembershipId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="InsideWordModel.Role">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="Id" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="JoinMembershipsAndRoles" TypeName="InsideWordModel.JoinMembershipsAndRoles" StoreEntitySet="JoinMembershipsAndRoles">
+            <EndProperty Name="Role">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="Membership">
+              <ScalarProperty Name="Id" ColumnName="MembershipId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="AlternateMemberIds">
+            <EntityTypeMapping TypeName="InsideWordModel.AlternateMemberId">
+              <MappingFragment StoreEntitySet="AlternateMemberIds">
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="IsHashed" ColumnName="IsHashed" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="LoginCount" ColumnName="LoginCount" />
+                <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+                <ScalarProperty Name="UsePassword" ColumnName="UsePassword" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="Id" ColumnName="AlternateMemberIdId" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="IsNonce" ColumnName="IsNonce" />
+                <ScalarProperty Name="IsValidated" ColumnName="IsValidated" />
+                <ScalarProperty Name="AlternateId" ColumnName="AlternateId" />
+                <ScalarProperty Name="AlternateType" ColumnName="AlternateType" />
+                <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Permissions">
+            <EntityTypeMapping TypeName="InsideWordModel.Permission">
+              <MappingFragment StoreEntitySet="Permissions">
+                <ScalarProperty Name="CanDelete" ColumnName="CanDelete" />
+                <ScalarProperty Name="CanRead" ColumnName="CanRead" />
+                <ScalarProperty Name="CanEdit" ColumnName="CanEdit" />
+                <ScalarProperty Name="CanCreate" ColumnName="CanCreate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ObjectTypeId" ColumnName="ObjectTypeId" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="Id" ColumnName="PermissionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="JoinRolesAndPermissions" TypeName="InsideWordModel.JoinRolesAndPermissions" StoreEntitySet="JoinRolesAndPermissions">
+            <EndProperty Name="Role">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="Permission">
+              <ScalarProperty Name="Id" ColumnName="PermissionId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="AlternateArticleIds">
+            <EntityTypeMapping TypeName="InsideWordModel.AlternateArticleId">
+              <MappingFragment StoreEntitySet="AlternateArticleIds">
+                <ScalarProperty Name="AlternateId" ColumnName="AlternateId" />
+                <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="Id" ColumnName="AlternateArticleIdId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InsideWordSettings">
+            <EntityTypeMapping TypeName="InsideWordModel.InsideWordSetting">
+              <MappingFragment StoreEntitySet="InsideWordSettings">
+                <ScalarProperty Name="SettingValue" ColumnName="SettingValue" />
+                <ScalarProperty Name="SettingKey" ColumnName="SettingKey" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="Id" ColumnName="InsideWordSettingsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArticleTexts">
+            <EntityTypeMapping TypeName="InsideWordModel.ArticleText">
+              <MappingFragment StoreEntitySet="ArticleTexts">
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="TextType" ColumnName="TextType" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+                <ScalarProperty Name="Id" ColumnName="ArticleTextId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AlternateCategoryIds">
+            <EntityTypeMapping TypeName="InsideWordModel.AlternateCategoryId">
+              <MappingFragment StoreEntitySet="AlternateCategoryIds">
+                <ScalarProperty Name="OverrideFlag" ColumnName="OverrideFlag" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="AlternateId" ColumnName="AlternateId" />
+                <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="SystemEditDate" ColumnName="SystemEditDate" />
+                <ScalarProperty Name="SystemCreateDate" ColumnName="SystemCreateDate" />
+                <ScalarProperty Name="Id" ColumnName="AlternateCategoryIdId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="JoinArticlesAndAlternateCategories" TypeName="InsideWordModel.JoinArticlesAndAlternateCategories" StoreEntitySet="JoinArticlesAndAlternateCategories">
+            <EndProperty Name="Article">
+              <ScalarProperty Name="Id" ColumnName="ArticleId" />
+            </EndProperty>
+            <EndProperty Name="AlternateCategoryId">
+              <ScalarProperty Name="Id" ColumnName="AlternateCategoryIdId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="InsideWordEntity" ZoomLevel="81">
+        <EntityTypeShape EntityType="InsideWordModel.Article" Width="1.5" PointX="4" PointY="14.5" Height="4.5505582682291674" IsExpanded="true" />
+        <EntityTypeShape EntityType="InsideWordModel.ArticleVote" Width="1.5" PointX="1.875" PointY="15.375" Height="2.9070849604904652" IsExpanded="true" />
+        <EntityTypeShape EntityType="InsideWordModel.Category" Width="1.5" PointX="4.875" PointY="20" Height="3.2357796223958353" IsExpanded="true" />
+        <EntityTypeShape EntityType="InsideWordModel.Comment" Width="1.5" PointX="12.625" PointY="13.875" Height="3.0714322916666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="InsideWordModel.Conversation" Width="1.5" PointX="10" PointY="14.75" Height="3.4001269526779652" IsExpanded="true" />
+        <EntityTypeShape EntityType="InsideWordModel.ConversationVote" Width="1.5" PointX="12.625" PointY="17.5" Height="2.907084960937496" IsExpanded="true" />
+        <EntityTypeShape EntityType="InsideWordModel.Member" Width="1.5" PointX="6.125" PointY="10.125" Height="5.7009895833333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="InsideWordModel.Photo" Width="1.5" PointX="10" PointY="6.375" Height="5.2079475911458335" IsExpanded="true" />
+        <EntityTypeShape EntityType="InsideWordModel.PhotoVote" Width="1.5" PointX="12.25" PointY="10.25" Height="2.9070849604904652" IsExpanded="true" />
+        <AssociationConnector Association="InsideWordModel.FK_Articles_Members" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.125" PointY="15.533829640944802" />
+          <ConnectorPoint PointX="5.5" PointY="15.533829640944802" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_ArticleVotes_Articles" ManuallyRouted="false">
+          <ConnectorPoint PointX="4" PointY="16.828542480245233" />
+          <ConnectorPoint PointX="3.375" PointY="16.828542480245233" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_Conversations_Articles" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.5" PointY="17.101481933370234" />
+          <ConnectorPoint PointX="7.135416666666667" PointY="17.101481933370234" />
+          <ConnectorPoint PointX="7.302083333333333" PointY="17.101481933370234" />
+          <ConnectorPoint PointX="7.3697941666666669" PointY="17.101481933370234" />
+          <ConnectorPoint PointX="7.5364608333333329" PointY="17.101481933370234" />
+          <ConnectorPoint PointX="10" PointY="17.101481933370234" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_ArticleVotes_Members" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.125" PointY="12.196584472656252" />
+          <ConnectorPoint PointX="5.052083333333333" PointY="12.196584472656252" />
+          <ConnectorPoint PointX="4.885416666666667" PointY="12.196584472656252" />
+          <ConnectorPoint PointX="2.96875" PointY="12.196584472656252" />
+          <ConnectorPoint PointX="2.96875" PointY="15.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_Categories_Categories" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.4069230769230767" PointY="23.235779622395835" />
+          <ConnectorPoint PointX="5.4069230769230767" PointY="23.485779622395839" />
+          <ConnectorPoint PointX="5.8534615384615378" PointY="23.485779622395839" />
+          <ConnectorPoint PointX="5.8534615384615378" PointY="23.235779622395835" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_Comments_Members" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.625" PointY="14.28125" />
+          <ConnectorPoint PointX="10.666666666666666" PointY="14.28125" />
+          <ConnectorPoint PointX="10.833333333333334" PointY="14.28125" />
+          <ConnectorPoint PointX="12.625" PointY="14.28125" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_Conversations_Comments" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.5" PointY="15.848216145833334" />
+          <ConnectorPoint PointX="12.625" PointY="15.848216145833334" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_Conversations_Author" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.625" PointY="15.370168457031252" />
+          <ConnectorPoint PointX="10" PointY="15.370168457031252" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_Conversations_Photos" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.75" PointY="11.582947591145834" />
+          <ConnectorPoint PointX="10.75" PointY="14.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_ConversationVotes_Conversations" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.5" PointY="17.825063476338983" />
+          <ConnectorPoint PointX="12.625" PointY="17.825063476338983" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_ConversationVotes_Members" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.21875" PointY="15.990336914062501" />
+          <ConnectorPoint PointX="7.21875" PointY="18.575063476338983" />
+          <ConnectorPoint PointX="7.3697941666666669" PointY="18.575063476338983" />
+          <ConnectorPoint PointX="7.5364608333333329" PointY="18.575063476338983" />
+          <ConnectorPoint PointX="8.5416666666666661" PointY="18.575063476338983" />
+          <ConnectorPoint PointX="8.7083333333333339" PointY="18.575063476338983" />
+          <ConnectorPoint PointX="12.625" PointY="18.575063476338983" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_Photos_Members" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.625" PointY="10.869381357828775" />
+          <ConnectorPoint PointX="10" PointY="10.869381357828775" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_PhotoVotes_Members" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.625" PointY="12.401266275818148" />
+          <ConnectorPoint PointX="10.666666666666666" PointY="12.401266275818148" />
+          <ConnectorPoint PointX="10.833333333333334" PointY="12.401266275818148" />
+          <ConnectorPoint PointX="12.25" PointY="12.401266275818148" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_PhotoVotes_Photos" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.5" PointY="10.916473795572916" />
+          <ConnectorPoint PointX="12.25" PointY="10.916473795572916" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.JoinArticlesAndCategories" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.1875" PointY="19.214905598958335" />
+          <ConnectorPoint PointX="5.1875" PointY="20" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.JoinArticlesAndMembers" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.5" PointY="14.954414820472401" />
+          <ConnectorPoint PointX="6.125" PointY="14.954414820472401" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.JoinArticlesAndPhotos" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.96875" PointY="14.5" />
+          <ConnectorPoint PointX="4.96875" PointY="8.3829451497395837" />
+          <ConnectorPoint PointX="6.2763757051282054" PointY="8.3829451497395837" />
+          <ConnectorPoint PointX="6.4430423717948715" PointY="8.3829451497395837" />
+          <ConnectorPoint PointX="10" PointY="8.3829451497395837" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.JoinMembersAndMembers" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.6569230769230767" PointY="15.990336914062501" />
+          <ConnectorPoint PointX="6.6569230769230767" PointY="16.240336914062503" />
+          <ConnectorPoint PointX="6.843394935897436" PointY="16.240336914062503" />
+          <ConnectorPoint PointX="7.010061602564102" PointY="16.240336914062503" />
+          <ConnectorPoint PointX="7.1034615384615378" PointY="16.240336914062503" />
+          <ConnectorPoint PointX="7.1034615384615378" PointY="15.990336914062501" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.JoinMembersAndPhotos" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.625" PointY="10.434690678914388" />
+          <ConnectorPoint PointX="10" PointY="10.434690678914388" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="InsideWordModel.ArticleScore" Width="1.5" PointX="3.125" PointY="20" Height="2.085348307291671" />
+        <EntityTypeShape EntityType="InsideWordModel.ConversationScore" Width="1.5" PointX="14.5" PointY="16.75" Height="1.9210009761154652" />
+        <EntityTypeShape EntityType="InsideWordModel.PhotoScore" Width="1.5" PointX="12.25" PointY="8" Height="1.9210009761154652" />
+        <AssociationConnector Association="InsideWordModel.FK_ArticleScores_Articles" >
+          <ConnectorPoint PointX="4.3125" PointY="19.214905598958335" />
+          <ConnectorPoint PointX="4.3125" PointY="20" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_ConversationScores_Conversations" >
+          <ConnectorPoint PointX="11.5" PointY="17.223216145833334" />
+          <ConnectorPoint PointX="14.5" PointY="17.223216145833334" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_PhotoScores_Photos" >
+          <ConnectorPoint PointX="11.5" PointY="8.9605004880577326" />
+          <ConnectorPoint PointX="12.25" PointY="8.9605004880577326" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="InsideWordModel.Group" Width="1.5" PointX="0.75" PointY="4.25" Height="2.7427376302083317" />
+        <AssociationConnector Association="InsideWordModel.FK_Members_Photos" >
+          <ConnectorPoint PointX="10" PointY="11.288664474487304" />
+          <ConnectorPoint PointX="7.625" PointY="11.288664474487304" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="InsideWordModel.Membership" Width="1.5" PointX="2.875" PointY="4.25" Height="2.5783902994791674" />
+        <EntityTypeShape EntityType="InsideWordModel.Role" Width="1.5" PointX="2.875" PointY="1.125" Height="2.4140429687499996" />
+        <AssociationConnector Association="InsideWordModel.FK_Memberships_Groups" >
+          <ConnectorPoint PointX="2.25" PointY="5.5391951497395837" />
+          <ConnectorPoint PointX="2.875" PointY="5.5391951497395837" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_Roles_Groups" >
+          <ConnectorPoint PointX="2.25" PointY="4.25" />
+          <ConnectorPoint PointX="2.625" PointY="3.875" />
+          <ConnectorPoint PointX="2.625" PointY="3.9140429687499996" />
+          <ConnectorPoint PointX="2.5" PointY="3.9140429687499996" />
+          <ConnectorPoint PointX="2.875" PointY="3.5390429687499996" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_Memberships_Members" >
+          <ConnectorPoint PointX="6.3597090384615385" PointY="10.125" />
+          <ConnectorPoint PointX="6.3597090384615385" PointY="5.5391951497395837" />
+          <ConnectorPoint PointX="4.375" PointY="5.5391951497395837" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.JoinMembershipsAndRoles" >
+          <ConnectorPoint PointX="3.6562525" PointY="4.25" />
+          <ConnectorPoint PointX="3.6562525" PointY="3.5390429687499996" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="InsideWordModel.AlternateMemberId" Width="1.5" PointX="0.5" PointY="7.625" Height="3.8931689453125031" />
+        <EntityTypeShape EntityType="InsideWordModel.Permission" Width="1.5" PointX="0.75" PointY="0.5" Height="3.0714322916666674" />
+        <AssociationConnector Association="InsideWordModel.FK_AlternateMemberIds_Members" >
+          <ConnectorPoint PointX="6.125" PointY="10.821584472656252" />
+          <ConnectorPoint PointX="5.052083333333333" PointY="10.821584472656252" />
+          <ConnectorPoint PointX="4.885416666666667" PointY="10.821584472656252" />
+          <ConnectorPoint PointX="2" PointY="10.821584472656252" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_Permissions_Groups" >
+          <ConnectorPoint PointX="1.4687475" PointY="4.25" />
+          <ConnectorPoint PointX="1.4687475" PointY="3.5714322916666674" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.JoinRolesAndPermissions" >
+          <ConnectorPoint PointX="2.25" PointY="2.300768984374999" />
+          <ConnectorPoint PointX="2.875" PointY="2.300768984374999" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_Photos_Photos" >
+          <ConnectorPoint PointX="10.531923076923077" PointY="6.375" />
+          <ConnectorPoint PointX="10.531923076923077" PointY="6.1249999999999982" />
+          <ConnectorPoint PointX="10.978461538461538" PointY="6.1249999999999982" />
+          <ConnectorPoint PointX="10.978461538461538" PointY="6.375" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="InsideWordModel.AlternateArticleId" Width="1.5" PointX="1" PointY="12.875" Height="2.2496956380208388" />
+        <AssociationConnector Association="InsideWordModel.FK_AlternateArticleIds_Articles" >
+          <ConnectorPoint PointX="4" PointY="14.812347819010419" />
+          <ConnectorPoint PointX="3.0520833333333335" PointY="14.812347819010419" />
+          <ConnectorPoint PointX="2.8854166666666665" PointY="14.812347819010419" />
+          <ConnectorPoint PointX="2.5" PointY="14.812347819010419" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_AlternateArticleIds_Members" >
+          <ConnectorPoint PointX="6.125" PointY="13.65625" />
+          <ConnectorPoint PointX="5.052083333333333" PointY="13.65625" />
+          <ConnectorPoint PointX="4.885416666666667" PointY="13.65625" />
+          <ConnectorPoint PointX="3.0520833333333335" PointY="13.65625" />
+          <ConnectorPoint PointX="2.8854166666666665" PointY="13.65625" />
+          <ConnectorPoint PointX="2.5" PointY="13.65625" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="InsideWordModel.InsideWordSetting" Width="1.5" PointX="7.5" PointY="1.875" Height="1.7566536458333388" />
+        <EntityTypeShape EntityType="InsideWordModel.ArticleText" Width="1.5" PointX="1" PointY="18.625" Height="1.5923063151041674" />
+        <AssociationConnector Association="InsideWordModel.FK_ArticleTexts_Articles" >
+          <ConnectorPoint PointX="4" PointY="18.919952799479169" />
+          <ConnectorPoint PointX="2.5" PointY="18.919952799479169" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="InsideWordModel.AlternateCategoryId" Width="1.5" PointX="7.875" PointY="19" Height="2.7427376302083353" />
+        <AssociationConnector Association="InsideWordModel.FK_AlternateCategoryIds_AlternateCategoryIds" >
+          <ConnectorPoint PointX="6.375" PointY="20.871368815104169" />
+          <ConnectorPoint PointX="7.875" PointY="20.871368815104169" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.FK_AlternateCategoryIds_Members" >
+          <ConnectorPoint PointX="7.4531275" PointY="15.990336914062501" />
+          <ConnectorPoint PointX="7.4531275" PointY="19.59375" />
+          <ConnectorPoint PointX="7.875" PointY="19.59375" />
+        </AssociationConnector>
+        <AssociationConnector Association="InsideWordModel.JoinArticlesAndAlternateCategories" >
+          <ConnectorPoint PointX="8.625" PointY="19" />
+          <ConnectorPoint PointX="8.625" PointY="17.869525204854611" />
+          <ConnectorPoint PointX="7.5364608333333329" PointY="17.869525204854611" />
+          <ConnectorPoint PointX="7.3697941666666669" PointY="17.869525204854611" />
+          <ConnectorPoint PointX="7.302083333333333" PointY="17.869525204854611" />
+          <ConnectorPoint PointX="7.135416666666667" PointY="17.869525204854611" />
+          <ConnectorPoint PointX="5.5" PointY="17.869525204854611" />
+        </AssociationConnector>
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

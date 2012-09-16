@@ -1,0 +1,161 @@
+.indexTitle 
+{
+    color: #000;
+    height: 30px;
+    margin: 4px 0px 0px 0px;
+}
+
+.blurb h2
+{
+    clear: none;
+    
+    /*including overflow hidden for those browsers that don't support word-wrap*/
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.blurb p
+{
+    /*including overflow hidden for those browsers that don't support word-wrap*/
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.blurb .miniToolBar {
+	clear: both;
+	margin-top: 5px;
+	height: 12px;
+	padding: 4px 8px;
+	font-size: 11px;
+}
+
+.miniToolBar > *
+{
+    float: left;
+    margin-left: 8px;
+}
+
+.blurbContent .author {
+	padding-bottom: 8px;
+	font-style: italic;
+	font-size: 11px;
+}
+
+.blurbContent .photoWrapper 
+{
+    float: left;
+	margin: 0 8px 8px 0;
+}
+
+.buttonIndexWide
+{
+    padding: 5px 40% !important;
+}
+
+/*=========================================*/
+/* Masonry CSS                             */
+/*=========================================*/
+
+.blurbList {
+    background: #FFF;
+	margin-bottom: 20px;
+	width: 857px;
+}
+
+.blurbList:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.blurb {
+    margin: 10px;
+    padding: 0px;
+    float: left;
+    border-bottom: 2px solid #DDD;
+    width: 400px;
+}
+
+/* Infinite Scroll loader */
+#infscr-loading { 
+    z-index: 5000;
+    position: fixed;
+    left: 40%;
+    bottom: 40px;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    background: #000; 
+    opacity: 0.8;
+    color: #FFF;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+/*=========================================*/
+/* READER WRITER SLIDER                    */
+/*=========================================*/
+.readerWriterSliderHolder, .linkHolder
+{
+    height:27px;
+}
+
+.readerWriterSliderHolder
+{
+    width: 422px;
+    margin: 0 auto;
+}
+
+.linkHolder
+{
+    float:left;
+    line-height: 27px;
+    margin: 0px 4px 0px 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.sliderHolder
+{
+    border: 0px;
+    width:140px;
+    height:26px;
+    padding: 1px;
+    float:left;
+    background:transparent url(/Content/img/interface/sliderHolder.png) no-repeat scroll 0px 0px;
+    color: transparent;
+}
+
+.sliderIndex {
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+	width: 857px;
+	
+	/*Height will be resized anyway by masonry but set it as a minimum*/
+	height: 900px;
+}
+
+    /* root element for scrollable items. Must be absolutely positioned
+	   and it should have a extremely large width to accommodate scrollable items.
+	   it's enough that you set width and height for the root element and
+	   not for this element. */
+    .sliderIndex .sliderItems {
+	    /* this cannot be too large */
+	    width:20000em;
+	    position:absolute;
+    }
+
+        /* a single item. must be floated in horizontal scrolling.
+	       typically, this element is the one that *you* will style
+	       the most.*/
+        .sliderIndex .sliderItems .sliderDiv {
+	        float:left;
+	        width:857px;
+	        margin: 0px 23px 0px 0px;
+        }

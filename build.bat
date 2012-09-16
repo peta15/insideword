@@ -1,0 +1,2 @@
+NAnt
+pause

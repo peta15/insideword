@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /bin
+Disallow: /admin
+Disallow: /views
+Disallow: /Content
+Disallow: /Global.asax
+Disallow: /Web.config

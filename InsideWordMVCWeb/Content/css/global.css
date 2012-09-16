@@ -1,0 +1,847 @@
+/*=====================================================*/
+/* GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL
+/*=====================================================*/
+body {
+	margin: 0;
+	color: #444;
+	font: 12px arial;
+}
+
+h1 {
+    margin: 0;
+	padding: 0;
+	font-size: 24px;
+	color: #004276;
+	clear: left;
+}
+
+h2 {
+    margin: 0;
+	padding: 0;
+	font-size: 20px;
+	color: #004276;
+	clear: left;
+}
+
+h3, h4, h5, h6 {
+    margin: 0;
+	padding: 0;
+	font-size: 14px;
+	clear: left;
+	/*font-family: "Palatino Linotype";*/
+}
+
+p {
+    margin: 0;
+	padding: 0;
+	line-height: 16px;
+}
+
+a {
+	color: #004276;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+ul li {
+    list-style-type: square;
+    list-style-image: none;
+}
+
+img {
+	border: none;
+}
+
+div.hr {
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px solid #ddd;
+    clear: both;
+}
+
+div.h1hr {
+    margin-bottom: 16px;
+    padding: 0px;
+    border-bottom: 1px solid #ddd;
+    clear: both;
+}
+
+div.h2hr, div.h3hr, div.h4hr, div.h5hr, div.h6hr {
+    margin-bottom: 12px;
+    padding: 0px;
+    border-bottom: 1px solid #ddd;
+    clear: both;
+}
+
+.cls {
+	clear: both;
+	height: 1px;
+	line-height: 1;
+}
+
+.cls20 {
+	clear: both;
+	height: 1px;
+	line-height: 1;
+	margin-bottom: 20px;
+}
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.center 
+{
+    text-align: center;
+}
+
+.hidden 
+{
+    display: none;
+}
+
+.i
+{
+    font-style: italic;
+}
+
+.b
+{
+    font-weight: bold;
+}
+
+.red
+{
+    color: #A90000 !important;
+}
+
+.inline
+{
+    display: inline;
+}
+
+.block
+{
+    display: block;
+}
+
+img.profileImg
+{
+    margin: 8px;
+}
+
+/*==================================*/
+/* INFO PAGE STYLES
+/*==================================*/
+
+.info ul li
+{
+    list-style: disc;
+}
+
+.info dl > dt
+{
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.info dl > dd > p
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info dl > dd > ul > li
+{
+    list-style: disc;
+}
+
+.info p 
+{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.info h1
+{
+    margin-bottom: 15px;
+}
+
+.info p, .info li, .info dt, .info dd
+{
+    font-size: 14px;
+}
+
+.terms p
+{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.terms ol > li
+{
+    list-style: decimal;
+    margin: 10px;
+	font-weight: bold;
+}
+
+.terms ol > ol > li
+{
+    list-style: upper-alpha;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.terms ul > li
+{
+    list-style: disc;
+}
+
+.faq ol > li
+{
+    list-style: decimal;
+}
+
+/*================================*/
+/* MINI ICONS
+/*================================*/
+div.voteimg
+{
+    height: 16px;
+    width: 16px;
+    background: transparent url('/Content/img/interface/miniicon.png') no-repeat scroll 0px 0px;
+}
+
+div.commentimg
+{
+    height: 16px;
+    width: 16px;
+    background: transparent url('/Content/img/interface/miniicon.png') no-repeat scroll -16px 0px;
+}
+
+div.personimg
+{
+    height: 16px;
+    width: 16px;
+    background: transparent url('/Content/img/interface/miniicon.png') no-repeat scroll -32px 0px;
+}
+
+div.emailimg
+{
+    height: 16px;
+    width: 16px;
+    background: transparent url('/Content/img/interface/miniicon.png') no-repeat scroll -48px 0px;
+}
+
+div.worldimg
+{
+    height: 16px;
+    width: 16px;
+    background: transparent url('/Content/img/interface/miniicon.png') no-repeat scroll -64px 0px;
+}
+
+div.penimg
+{
+    height: 16px;
+    width: 16px;
+    background: transparent url('/Content/img/interface/miniicon.png') no-repeat scroll -80px 0px;
+}
+
+div.flagimg
+{
+    height: 16px;
+    width: 16px;
+    background: transparent url('/Content/img/interface/miniicon.png') no-repeat scroll -96px 0px;
+}
+ 
+/*=========================*/
+/* BUTTONS
+/*=========================*/
+
+/* input submit button */
+input.button:active , .editor-submit input[type="submit"]:active
+{
+    background:#EEEEEE;
+}
+
+input.button:disabled , .editor-submit input[type="submit"]:disabled
+{
+    background: #EEEEEE;
+    color: #AAA !important;
+}
+
+input.button, .editor-submit input[type="submit"]
+{
+    -moz-border-radius:2px 2px 2px 2px;
+    background:url("../img/interface/gray_button.png") repeat-x scroll 0 9px #FFFFFF;
+    border-color:#CCCCCC #AAAAAA #AAAAAA #CCCCCC;
+    border-right:1px solid #AAAAAA;
+    border-style:solid;
+    border-width:1px;
+    color:#333;
+    cursor:pointer;
+    font-family: Arial;
+    font-size:12px;
+    font-weight:bold;
+    padding:4px 8px;
+    text-align:center;
+    vertical-align:baseline !important; /* middle */
+    overflow:visible;
+    outline:medium none;
+}
+
+/* link button */
+a.button:active
+{
+    background: #EEEEEE;
+}
+
+a.button:disabled
+{
+    background: #EEEEEE;
+    color: #AAA !important;
+}
+
+a.button
+{
+    -moz-border-radius:2px 2px 2px 2px;
+    background:url("../img/interface/gray_button.png") repeat-x scroll 0 9px #FFFFFF;
+    border-color:#CCCCCC #AAAAAA #AAAAAA #CCCCCC;
+    border-right:1px solid #AAAAAA;
+    border-style:solid;
+    border-width:1px;
+    color:#333;
+    cursor:pointer;
+    font-family: Arial;
+    font-size:12px;
+    font-weight:bold;
+    padding:5px 8px;
+    text-align:center;
+    outline:medium none;
+    text-decoration:none;
+}
+
+/*=========================================*/
+/* GRIDS                                   */
+/*=========================================*/
+.buttonCol
+{
+    width: 1px;
+}
+
+/*=========================================*/
+/* INPUTS                                  */
+/*=========================================*/
+.editor-label {
+	float: left;
+	width: 128px;
+	display: block;
+	text-align: right;
+	font-weight: bold;
+	padding: 4px 0 0 0;
+	margin-right: 10px;
+	clear: left;
+}
+
+.editor-field, .editor-field-large
+{
+    margin: 0 0 8px 0;
+    float: left;
+}
+
+.editor-field input[type="text"], 
+.editor-field-large input[type="text"],
+.editor-field input[type="password"], 
+.editor-field-large input[type="password"],
+.editor-field textarea,
+.editor-field-large textarea
+{
+	font-family: Arial;
+	font-size: 13px;
+	padding: 5px 4px 5px 4px;
+	border: 1px solid #e5e5e5;
+}
+
+.editor-field input[type="text"],
+.editor-field input[type="password"],
+.editor-field textarea,
+.editor-field .note
+{
+    width: 300px;
+}
+
+.editor-field-large input[type="text"],
+.editor-field-large input[type="password"],
+.editor-field-large textarea,
+.editor-field-large .note
+{
+	width: 622px;
+}
+
+select {
+	width: 200px;
+	font-size: 13px;
+	font-family: Arial;
+	padding: 4px 3px;
+	border: 1px solid #e5e5e5;
+}
+
+.editor-submit
+{
+    clear: both;
+    margin: 0 0 10px 136px;
+}
+
+.note
+{
+    font-size: 10px;
+    line-height: 11px;
+    font-style: italic;
+    color: #999999;
+}
+
+/*=========================================*/
+/* VALIDATION                              */
+/*=========================================*/
+.validationBulletSummary
+{
+    float: left;
+    margin: 0px 0px 0px 32px;
+    color: Red;
+}
+
+    .validationBulletSummary ul
+    {
+        margin: 0px;
+        padding: 0px;
+        color: Red;
+    }
+    
+.validationTextSummary
+{
+    float: left;
+    margin: 0px;
+    color: Red;
+}
+
+.errorText
+{
+    color: Red;
+}
+
+/* for jquery validation */
+/*
+.error {
+	border: 2px solid red;
+	background-color: #FFFFD5;
+	margin: 0px;
+	color: red;
+}
+*/
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+    display: block;
+}
+
+.editor-field-large .field-validation-error
+{
+    display: block;
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/*=========================================*/
+/* no script                              */
+/*=========================================*/
+
+.noscript
+{
+    background-color: #AE0000;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    left: 0;
+    padding: 5px 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 101;
+}
+
+
+/*=====================================================*/
+/* MASTER MASTER MASTER MASTER MASTER MASTER MASTER
+/*=====================================================*/
+.masterDiv {
+    width: 1024px;
+    margin: 0 auto 0 auto;
+}
+
+.body 
+{
+    float: left;
+    width: 857px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.footer
+{
+    width: 100%;
+}
+        
+/*=========================================*/
+/* HEADER                                  */
+/*=========================================*/
+.header {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+    .header .logo {
+        width: 240px;
+        height: 40px;
+        display: block;
+        float: left;
+        margin-right: 10px;
+    }
+    
+    .header .latest {
+        float: left;
+	    color: #000;
+	    height: 32px;
+    }
+    
+    .header .motto {
+	    color: #a90000;
+	    font-size: 14px;
+	    margin-right: 5px;
+	    line-height: 32px;
+	    font-weight: bold;
+	    float: left;
+    }
+    
+    .header .headerItem {
+        float: right;
+        margin: 4px;
+        vertical-align: middle;
+        height: 32px;
+    }
+	
+	.header .textSearch {
+        padding-left: 20px;
+        width: 160px;
+        background: url('../img/interface/search.gif') no-repeat;
+    }
+    
+    .headerBarGraphic 
+	{
+        background: url('../img/interface/bar_toolbar.jpg') center bottom no-repeat;
+        width: 100%;
+        height: 20px;
+    }
+/*=========================================*/
+/* NEWS TICKER                             */
+/*=========================================*/
+
+/* 
+    root element for the scrollable. 
+    when scrolling occurs this element stays still. 
+*/ 
+div.newsTicker { 
+ 
+    /* required settings */ 
+    position:relative; 
+    overflow:hidden; 
+    width: 370px; 
+    height:32px;
+    float: right;
+    padding: 0 10px;
+    line-height: 32px;
+} 
+ 
+/* 
+    root element for scrollable items. Must be absolutely positioned 
+    and it should have a extremely large width to accomodate scrollable items. 
+    it's enough that you set width and height for the root element and 
+    not for this element. 
+*/ 
+div.newsTicker div.items { 
+    /* this cannot be too large */ 
+    width:20000em;  
+    position:absolute; 
+} 
+ 
+/* 
+    a single item. must be floated in horizontal scrolling. 
+    typically, this element is the one that *you* will style 
+    the most. 
+*/ 
+div.newsTicker div.items div { 
+    float:left; 
+    padding-left: 10px;
+    width: 370px;
+    overflow: hidden;
+}
+
+/*=========================================*/
+/* NAVIGATION BAR                          */
+/*=========================================*/
+.navigationBar {
+	width: 147px;
+	margin-right: 20px;
+	float: left;
+	margin-top: 25px;
+	margin-bottom: 230px; /* to accomodate the explore inside word menu */
+}
+
+    .navigationList b.plus 
+    {
+        font-size: larger;
+        font-style: oblique;
+    }
+    
+    .navigationList b.large 
+    {
+        font-size: 14px;
+        font-style: oblique;
+    }
+    
+    .navigationList > ul
+    {
+        margin-bottom: 6px !important;
+    }
+
+    .navigationList div.promo
+    {
+        margin: 24px 0px 24px 0px;
+        text-align: center;
+    }
+        
+        div.promo p
+        {
+            line-height: 18px;
+            font-size: 18px;
+	        color: #004276;
+        }
+
+.hidden
+{
+    display: none;
+}
+
+.pointer
+{
+    cursor: pointer;
+}
+
+
+/*** ESSENTIAL STYLES FOR SUPERFISH MENU ***/
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.sf-menu {
+	line-height:	1.0;
+}
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			147px; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li {
+	width:			100%;
+}
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float:			left;
+	position:		relative;
+}
+.sf-menu a {
+	display:		block;
+	position:		relative;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0;
+	top:			2.5em; /* match top ul list item height */
+	z-index:		    99;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			147px; /* match ul width */
+	top:			0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			147px; /* match ul width */
+	top:			0;
+}
+
+/*** SKIN ***/
+.sf-menu {
+	float:			left;
+}
+.sf-menu a {
+	border-left:	1px solid #fff;
+	border-top:		1px solid #F3F3F3;
+	padding: 		.75em 1em;
+	text-decoration:none;
+}
+.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:			#004276;
+}
+.sf-menu li {
+	background:		#EEEEEE;
+}
+.sf-menu li li {
+	background:		#E7E7E7;
+}
+.sf-menu li li li {
+	background:		#E7E7E7;
+}
+.sf-menu li:hover, .sf-menu a:focus, .sf-menu a:active {
+	background:		#004276;
+	outline:		0;
+}
+.sf-menu li.sfHover {
+	background:		#D5D5D5;
+	outline:		0;
+}
+.sf-menu a:hover {
+	background:		#004276;
+	color:          #F3F3F3;
+	outline:		0;
+}
+
+/*** arrows **/
+.sf-menu a.sf-with-ul {
+	padding-right: 	2.25em;
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+.sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			.75em;
+	top:			1.05em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url('../img/interface/arrows-ffffff.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			.8em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+.sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+.sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+/* apply hovers to modern browsers */
+.sf-menu ul a:focus > .sf-sub-indicator,
+.sf-menu ul a:hover > .sf-sub-indicator,
+.sf-menu ul a:active > .sf-sub-indicator,
+.sf-menu ul li:hover > a > .sf-sub-indicator,
+.sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+/*** shadows for all but IE6 ***/
+.sf-shadow ul {
+	background:	url('../img/interface/shadow.png') no-repeat bottom right;
+	padding: 0 8px 9px 0;
+	-moz-border-radius-bottomleft: 17px;
+	-moz-border-radius-topright: 17px;
+	-webkit-border-top-right-radius: 17px;
+	-webkit-border-bottom-left-radius: 17px;
+}
+.sf-shadow ul.sf-shadow-off {
+	background: transparent;
+}
+
+/*** SUPERFISH VERTICAL ***/
+
+/*** adding sf-vertical in addition to sf-menu creates a vertical menu ***/
+.sf-vertical, .sf-vertical li {
+	width:	147px;
+	border-bottom: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+}
+/* this lacks ul at the start of the selector, so the styles from the main CSS file override it where needed */
+.sf-vertical li:hover ul,
+.sf-vertical li.sfHover ul {
+	left:	147px; /* match ul width */
+	top:	0;
+}
+
+/*** alter arrow directions ***/
+.sf-vertical .sf-sub-indicator { background-position: -10px 0; } /* IE6 gets solid image only */
+.sf-vertical a > .sf-sub-indicator { background-position: 0 0; } /* use translucent arrow for modern browsers*/
+
+/* hover arrow direction for modern browsers*/
+.sf-vertical a:focus > .sf-sub-indicator,
+.sf-vertical a:hover > .sf-sub-indicator,
+.sf-vertical a:active > .sf-sub-indicator,
+.sf-vertical li:hover > a > .sf-sub-indicator,
+.sf-vertical li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}

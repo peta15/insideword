@@ -1,0 +1,2 @@
+﻿/// <reference path="/Scripts/thirdparty/jquery-1.4.4.min.js" />
+window.$zopim || (function (d, s) { var z = $zopim = function (c) { z._.push(c) }, $ = z.s = d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) { z.set._.push(o) }; $.setAttribute('charset', 'utf-8'); $.async = !0; z.set._ = []; $.src = ('https:' == d.location.protocol ? 'https://ssl' : 'http://cdn') + '.zopim.com/?1okKRY9daflYyCBki5W5ZsjvIWpRzxmx'; $.type = 'text/java' + s; z.t = +new Date; z._ = []; e.parentNode.insertBefore($, e) })(document, 'script')

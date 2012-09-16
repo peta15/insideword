@@ -1,0 +1,10 @@
+﻿div.imagesection
+{
+    float: left;   
+}
+
+div.textsection
+{
+    float: right;
+    width: 750px;
+}

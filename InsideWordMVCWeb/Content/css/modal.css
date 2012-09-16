@@ -1,0 +1,8 @@
+/*=========================================*/
+/* LOGIN MODAL (JQUERY UI)                 */
+/*=========================================*/
+#modalLoginTabs { border:0; padding:0; }
+#ui-tab-dialog-close { position:absolute; right:4px; top:19px; }
+#ui-tab-dialog-close a { float:none; padding:0; }
+.ui-dialog ul.ui-tabs-nav li a { cursor: pointer !important; }
+.ui-dialog .ui-tabs-panel { cursor: default; }

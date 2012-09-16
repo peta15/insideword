@@ -1,0 +1,245 @@
+﻿/* COMMENTS */
+
+.comments
+{
+    margin: 0 0 10px 0;
+}
+
+.comments h3
+{
+    color: #666;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.commentsArea
+{
+}
+
+.commentsAreaReply
+{
+    margin-left: 50px;
+}
+
+.commentBody
+{
+    margin-top: 15px;
+    float: left;
+    width: 561px;
+    border: 1px solid #ddd;
+    min-height: 65px;
+}
+
+.commentBodyText
+{
+    float: left;
+    width: 479px;
+    /*including overflow hidden for those browsers that don't support word-wrap*/
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.commentBodyText p
+{
+    color: #000000;
+    margin: 12px 16px;
+}
+
+.commentBodyTextReply
+{
+    float: left;
+    width: 459px;
+    /*including overflow hidden for those browsers that don't support word-wrap*/
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.commentBodyTextReply p
+{
+    color: #000000;
+    margin: 12px 16px;
+}
+
+.commentBodyReply
+{
+    margin-top: 1px;
+    float: left;
+    width: 511px;
+    border: 1px solid #ddd;
+}
+
+.comments .commentsFormHdng
+{
+    margin: 30px 0 20px 0;
+}
+
+
+.commentsForm
+{
+    padding: 32px 0px 0px 0px;
+    clear: both;
+}
+
+.commentsForm label
+{
+    float: right;
+    width: 330px;
+    color: #999;
+    padding: 5px 0 0 0;
+}
+
+.commentsForm .txtArea
+{
+    width: 650px;
+    height: 100px;
+    padding: 5px 4px 5px 26px;
+    border: 1px solid #e5e5e5;
+    background: url('../img/interface/form.gif') 6px -112px no-repeat;
+}
+
+.commentReplyTemplate
+{
+    display: none;
+}
+.openCommentReply
+{
+    cursor: pointer;
+    font-size: 13px;
+}
+.openCommentReply:hover
+{
+    color: #000000;
+    text-decoration: underline;
+}
+.close
+{
+    cursor: pointer;
+}
+
+.commentHeaderText
+{
+    color: #004276;
+    font-size: 11px;
+}
+
+.commentReplyText
+{
+    color: #004276;
+    margin: 5px;
+    font-size: 9px;
+    float: right;
+    text-align: right;
+    font-weight: bold;
+}
+
+.commentReplyTextArea
+{
+    width: 479px;
+    height: 85px;
+    padding: 5px 4px 5px 26px;
+    border: 1px solid #e5e5e5;
+    background: transparent url(../img/interface/form.gif) no-repeat scroll 6px -112px;
+}
+
+.commentVoteContainer
+{
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline;
+}
+
+.commentVote
+{
+    background: url("../img/interface/smallThumbs.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    text-indent: -9999px;
+    top: 2;
+    width: 16px;
+}
+
+.commentVoteUp
+{
+}
+
+.commentVoteDown
+{
+    background-position: -16px 0;
+    left: 18px;
+}
+
+.commentVoteUp:hover
+{
+    background-position: 0 -16px;
+}
+.commentVoteDown:hover
+{
+    background-position: -16px -16px;
+}
+.commentVoteUp:active
+{
+    background-position: 0 -32px;
+}
+.commentVoteDown:active
+{
+    background-position: -16px -32px;
+}
+
+.commentVoteText
+{
+    padding-left: 30px;
+    font-size: 12px;
+}
+
+.userDetail
+{
+    margin-top: 15px;
+    float: left;
+    width: 117px;
+    color: #999;
+    font-size: 10px;
+    background: url('../img/interface/arrow_comments.gif') right 6px no-repeat;
+}
+
+.userDetailReply
+{
+    margin-top: 1px;
+    float: left;
+    clear: left;
+    width: 117px;
+    color: #999;
+    font-size: 10px;
+    background: url('../img/interface/arrow_comments.gif') right 6px no-repeat;
+    min-height: 30px;
+}
+
+.commentReplyControls
+{
+    padding: 2px;
+    background-color: #EEE;
+}
+
+.loadingComment
+{
+    height: 35px;
+    margin-top: -10px;
+}
+
+/*=========================================*/
+/* textarea charCount.js                   */
+/*=========================================*/
+
+.counter{
+	font-size:12px;
+	font-weight:bold;
+	color:#ccc;
+	margin: 7px 7px 7px 7px;
+	float: right;
+}
+.warning{color:#600;}	
+.exceeded{color:#e00;}

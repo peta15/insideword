@@ -1,0 +1,101 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link href="/favicon.ico" rel="shortcut icon"/>
+
+    <!-- load scripts at top that must be loaded before page load to avoid visual or usability issues -->
+    <!-- jquery: Load this first and foremost to avoid any requirements issues -->
+    <script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="<%: Links.Content.css.global_css %>" media="all" />
+    <link rel="stylesheet" type="text/css" href="<%: Links.Content.css.modal_css %>" media="all" />
+    <link rel="stylesheet" type="text/css" href="<%: Links.Content.css.thirdparty.openid_css %>" media="all" />
+
+    <!--Keep at top to avoid any issues-->
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.global_js %>"></script>
+
+    <!-- jquery ui-->
+    <link rel="Stylesheet" type="text/css" href="<%: Links.Content.css.thirdparty.jqueryui.ui_jqgrid_css %>" media="all" />
+    <link rel="Stylesheet" type="text/css" href="<%: Links.Content.css.thirdparty.jqueryui.jquery_ui_1_8_5_custom_css %>" media="all" />
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.thirdparty.jquery_ui_1_8_5_custom_min_js %>"></script>
+    <!-- <script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script> -->
+    
+    <!-- for navigation list -->
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.thirdparty.jquery_superfish_1_4_8_js %>"></script>
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.thirdparty.hoverIntent_js %>"></script>
+
+    <asp:ContentPlaceHolder ID="Head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <noscript>
+        <div class="noscript">InsideWord works best with javascript enabled.  Please go to your browsers options and enable javascript.</div>
+    </noscript>
+    <div class="masterDiv">
+        <%  Html.RenderAction(MVC.Child.MasterHeader()); %>
+        <div class="navBarAndBody">
+            <% Html.RenderAction(MVC.Child.MasterNavigationBar()); %>
+            <div class="body">
+                <div class="headerBarGraphic center"></div>
+                <asp:ContentPlaceHolder ID="Body" runat="server"></asp:ContentPlaceHolder>
+                <div class="cls"></div>
+            </div>
+            <div class="cls"></div>
+        </div>
+        <div class="footer">
+            <div class="hr"></div>
+            <p class="copyRight">InsideWord &copy; 2011</p>
+        </div>
+    </div>
+
+    <!-- load scripts at the bottom of the page for best performance (so they don't block parallel downloads -->
+    <!-- google search -->
+    <!--
+    <script language="javascript" type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.thirdparty.google_js %>"></script>
+    -->
+    <!-- UI Tools: Tabs, Tooltip, Scrollable and Overlay (4.05 Kb) -->
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.modded.jquery_tools_min_js %>"></script>
+    <!-- form validation -->
+    <script language="javascript" type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.thirdparty.jquery_validate_unobtrusive_min_js %>"></script>
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.thirdparty.jquery_unobtrusive_ajax_min_js %>"></script>
+    <!-- jqGrid libraries -->
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.thirdparty.grid_locale_en_js %>"></script>
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.thirdparty.jquery_jqGrid_min_js %>"></script>
+    <!-- embed.ly auto-embed media like youtube from urls -->
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.thirdparty.embedly_js %>"></script>
+    <!-- antiForgery works with annotation and helper (see annotations) -->
+    <!--
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.thirdparty.jquery_antiForgery_js %>"></script>
+    -->
+    <!-- altAlert override alerts with jquery ui dialog -->
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.thirdparty.jquery_altAlert_js %>"></script>
+
+    <!-- global scripts -->
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.jquery_insideword_js %>"></script>
+
+    <!-- User Voice feedback widget-->
+    <!--<script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.uservoice_js %>"></script>-->
+
+    <!-- Zopim Live Chat Script -->
+    <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.zopim_js %>"></script>
+
+    <% if (HttpContext.Current.IsDebuggingEnabled) { %>
+        <!-- DEBUG -->
+        <script language="javascript" type="text/javascript" src="<%: Links.Content.Scripts.thirdparty.jquery_dump_js %>"></script>
+        <script language="javascript" type="text/javascript">
+            SETTINGS.debug = true;
+        </script>
+    <% } %>
+    <asp:ContentPlaceHolder ID="Scripts" runat="server">
+        <!-- page specific scripts -->
+    </asp:ContentPlaceHolder>
+
+    <% Html.RenderAction(MVC.Child.MasterLoginModal()); %>
+
+</body>
+</html>

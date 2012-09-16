@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<project name="InsideWordRevisionBuild" default="build">
+	<property name="exec.msbuild" value="${framework::get-framework-directory('net-4.0')}/msbuild.exe" />
+	<property name="exec.aspnet_compiler" value="${framework::get-framework-directory('net-4.0')}/aspnet_compiler.exe" />
+	
+	<property name="build.fullPath" value="${path::get-full-path('./..')}" />
+	<property name="build.folderStartIndex" value="${string::last-index-of(build.fullPath, '\')+2}" />
+	<property name="build.folderLength" value="${string::get-length(build.fullPath) - convert::to-int(build.folderStartIndex)}" />
+	<property name="build.version" value="${string::substring(build.fullPath, build.folderStartIndex, build.folderLength)}" />
+	
+	<property name="path.build" value=".." />
+	<property name="path.IWTempBuild" value="${path.build}/InsideWordTemp" />
+	<property name="path.IWTempBuildFromProject" value="../${path.IWTempBuild}" />
+	<property name="path.sourceCode" value="." />
+	<property name="path.MVCWeb" value="${path.sourceCode}/InsideWordMVCWeb" />
+	<property name="path.SparrowRanker" value="${path.sourceCode}/SparrowRanker" />
+	<property name="path.SparrowMailReader" value="${path.sourceCode}/SparrowMailReader" />
+	
+	<target name="build" description="">
+	
+		<echo message="=======================================" />
+		<echo message="DIRECTORY VERSION CHECK - ${build.version}" />
+		<echo message="Check to prevent people from building in the dev directory" />
+		<echo message="=======================================" />
+		<regex pattern="[0-9]\.[0-9]\.[0-9]\.[0-9]" input="${build.version}" failonerror="true" />
+	
+		<echo message="=======================================" />
+		<echo message="UPDATING ASSEMBLIES TO v${build.version}" />
+		<echo message="=======================================" />
+		
+		<foreach item="File" property="filename">
+		<in><items><include name="${path.sourceCode}/*/Properties/AssemblyInfo.cs"></include></items></in>
+			<do>
+				<echo message="${filename}" />
+				<copy file="${filename}" tofile="${filename}.temp" overwrite="true" inputencoding="utf-8" outputencoding="utf-8">
+					<filterchain>
+						<replacestring from="0.0.0.0" to="${build.version}" />
+					</filterchain>
+				</copy>
+				<move file="${filename}.temp" tofile="${filename}" inputencoding="utf-8" outputencoding="utf-8" />
+			</do>
+		</foreach>
+		
+		<echo message="=======================================" />
+		<echo message="BUILDING INSIDEWORDWEB SOLUTION" />
+		<echo message="=======================================" />
+		<exec program="${exec.msbuild}">
+			<arg value="${path.sourceCode}/InsideWordWeb.sln" />
+			<arg value="/p:Configuration=Release" />
+			<arg value="/p:Optimize=true" />
+			<arg value="/nologo" />
+			<arg value="/verbosity:minimal" />
+			<arg value="/t:Clean" />
+			<arg value="/t:Rebuild" />
+			<arg value="/p:Debug=false" />
+		</exec>
+		
+		<echo message="=======================================" />
+		<echo message="BUILDING INSIDEWORDMVCWEB" />
+		<echo message="=======================================" />
+		<exec program="${exec.msbuild}" failonerror="true">
+			<arg value="${path.sourceCode}/InsideWordMVCWeb/InsideWordMVCWeb.csproj" />
+			<arg value="/p:Configuration=Release" />
+			<arg value="/nologo" />
+			<arg value="/verbosity:minimal" />
+			<arg value="/t:ResolveReferences" />
+			<arg value="/t:_CopyWebApplication" />
+			<arg value="/t:TransformWebConfig" />
+			<arg value="/p:OutDir=${path.IWTempBuildFromProject}/temp/" />
+			<arg value="/p:WebProjectOutputDir=${path.IWTempBuildFromProject}/InsideWordMVCWeb/" />
+		</exec>
+		
+		<echo message="=======================================" />
+		<echo message="CLEANING UP INSIDEWORDMVCWEB BUILD" />
+		<echo message="=======================================" />
+		<delete dir="${path.IWTempBuild}/temp" failonerror="true"/>
+		<delete file="${path.IWTempBuild}/InsideWordMVCWeb/HTMLPage1.htm" failonerror="false"/>
+		<delete file="${path.IWTempBuild}/InsideWordMVCWeb/Web.config" failonerror="true"/>
+		<delete file="${path.IWTempBuild}/InsideWordMVCWeb/Web.Debug.config" failonerror="true"/>
+		<delete file="${path.IWTempBuild}/InsideWordMVCWeb/Web.Release.config" failonerror="true"/>
+		<copy file="${path.sourceCode}/InsideWordMVCWeb/obj/Release/TransformWebConfig/transformed/Web.config" tofile="${path.IWTempBuild}/InsideWordMVCWeb/Web.config" />
+		
+		<echo message="=======================================" />
+		<echo message="BUIDLING SPARROW MAIL READER" />
+		<echo message="=======================================" />
+		<exec program="${exec.msbuild}" failonerror="true">
+			<arg value="${path.sourceCode}/SparrowMailReader.sln" />
+			<arg value="/p:Configuration=Release" />
+			<arg value="/p:Optimize=true" />
+			<arg value="/nologo" />
+			<arg value="/verbosity:minimal" />
+			<arg value="/t:Clean" />
+			<arg value="/t:Rebuild" />
+			<arg value="/p:Debug=false" />
+			<arg value="/p:OutDir=${path.IWTempBuildFromProject}/SparrowMailReader/" />
+		</exec>
+		
+		<echo message="=======================================" />
+		<echo message="BUILDING SPARROW RANKER" />
+		<echo message="=======================================" />
+		<exec program="${exec.msbuild}" failonerror="true">
+			<arg value="${path.sourceCode}/SparrowRanker.sln" />
+			<arg value="/p:Configuration=Release" />
+			<arg value="/p:Optimize=true" />
+			<arg value="/nologo" />
+			<arg value="/verbosity:minimal" />
+			<arg value="/t:Clean" />
+			<arg value="/t:Rebuild" />
+			<arg value="/p:Debug=false" />
+			<arg value="/p:OutDir=${path.IWTempBuildFromProject}/SparrowRanker/" />
+		</exec>
+		
+		<echo message="=======================================" />
+		<echo message="ZIPPING ALL BUILDS" />
+		<echo message="=======================================" />
+		<zip zipfile="${path.build}/InsideWord.zip" ziplevel="9" failonerror="true">
+			<fileset basedir="${path.IWTempBuild}">
+				<include name="**/*" />
+			</fileset>
+		</zip>
+		
+		<echo message="=======================================" />
+		<echo message="CLEANING UP BUILD TEMP DIRECTORY" />
+		<echo message="=======================================" />
+		<delete dir="${path.IWTempBuild}" failonerror="true"/>
+	</target>
+</project>

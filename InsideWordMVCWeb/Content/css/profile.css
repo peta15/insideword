@@ -1,0 +1,42 @@
+﻿img.adjustedProfileImg 
+{
+    margin: 0px 0px 8px 0px;
+}
+
+.bio
+{
+    margin: 13px 0px 13px 0px;
+}
+
+.birthday
+{
+    margin: 0px 0px 8px 0px;
+}
+
+.buttonIndexWide
+{
+    padding: 5px 40% !important;
+}
+    
+
+/*=========================================*/
+/* Masonry CSS                             */
+/*=========================================*/
+
+/* Infinite Scroll loader */
+#infscr-loading { 
+    z-index: 5000;
+    position: fixed;
+    left: 40%;
+    bottom: 40px;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    background: #000; 
+    opacity: 0.8;
+    color: #FFF;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+}

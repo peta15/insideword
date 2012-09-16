@@ -1,0 +1,112 @@
+﻿form.openid fieldset {border-style:none;}
+form.openid img {border-style:none;}
+
+form.openid ul { text-align:center; list-style-type:none; display:inline;}
+form.openid ul li {float:left; padding:4px; list-style-type: none;}
+form.openid ul li span {padding:0 1em 0 3px}
+form.openid fieldset {clear:both; padding:1em 0}
+form.openid div+fieldset {display:none}
+form.openid label {display:block; font-weight:bold; font-size:larger; margin-bottom:.5em}
+input[name=openid_username] {width:8em}
+input[name=openid_identifier] {width:18em}
+form.openid ul li.highlight { -moz-border-radius:4px; -webkit-border-radius:4px; background-color: #FD6}
+form.openid fieldset div {font-family:arial;-moz-border-radius:4px; -webkit-border-radius:4px; 
+                          background: #DCDCDC url(/Content/img/openid/fadegrey.png); padding:10px;display:inline-block}
+form.openid input[type='submit'] {margin-left:1em;}
+
+form.openid .openid_logo{color:#F7931E;padding:6px 0px 8px 28px; background: url(/Content/img/openid/openidico.png) no-repeat}
+
+#openid_login{float:left; font-size:larger; width:30%; margin:2em 1em; text-align:center}
+#openid_login div{margin-top:0.5em}
+#openid_login div+span{font-size:smaller}
+
+div.openidimg
+{
+    width: 60px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -120px 0px;
+}
+
+div.googleimg
+{
+    width: 60px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -360px 0px;
+}
+
+div.yahooimg
+{
+    width: 60px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -180px 0px;
+}
+
+div.aolimg
+{
+    width: 60px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -60px 0px;
+}
+
+div.flickrimg
+{
+    width: 16px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -496px 0px;
+}
+
+div.myopenidusernameimg
+{
+    width: 16px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -512px 0px;
+}
+
+div.livejournalimg
+{
+    width: 16px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -528px 0px;
+}
+
+div.technoratiimg
+{
+    width: 16px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -544px 0px;
+}
+
+div.wordpressimg
+{
+    width: 16px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -560px 0px;
+}
+
+div.bloggerimg
+{
+    width: 16px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -576px 0px;
+}
+
+div.claimidimg
+{
+    width: 16px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -592px 0px;
+}
+
+div.vidoopimg
+{
+    width: 16px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -608px 0px;
+}
+
+div.verisignimg
+{
+    width: 16px;
+    height: 16px;
+    background: transparent url(/Content/img/openid/openidlogos.png) no-repeat scroll -624px 0px;
+}

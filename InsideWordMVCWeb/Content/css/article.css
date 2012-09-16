@@ -1,0 +1,234 @@
+h1.articleListTitle {
+	color: #000000;
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+a > h1:hover {
+	text-decoration: underline;
+}
+
+.editArticle,.editArticle:hover {
+	color: red;
+}
+
+.article {
+	margin-bottom: 80px;
+	margin-right: 35px;
+	width: 645px;
+}   
+    .article h1 
+    {
+        /*including overflow hidden for those browsers that don't support word-wrap*/
+        overflow: hidden;
+        word-wrap: break-word;
+    }
+    
+    .article .blurb
+    {
+        margin: 8px 0px 8px 0px;
+        /*including overflow hidden for those browsers that don't support word-wrap*/
+        overflow: hidden;
+        word-wrap: break-word;
+    }
+    
+.articleBody, .mceContentBody 
+{
+    margin: 16px 0px 16px 0px;
+    color:#444444;
+    font-family:arial;
+    font-size: 13px;
+}
+
+.articleBody
+{
+    overflow: hidden;
+}
+
+    .articleBody h1, .mceContentBody h1,
+    .articleBody h2, .mceContentBody h2,
+    .articleBody h3, .mceContentBody h3,
+    .articleBody h4, .mceContentBody h4,
+    .articleBody h5, .mceContentBody h5,
+    .articleBody h6, .mceContentBody h6
+    {
+        clear: both;
+        color: #004276;
+        margin: 0px 0px 20px 0px;
+        word-wrap: break-word;
+    }
+    
+    .articleBody h1, .mceContentBody h1
+    {
+        font-size: 24px;
+    }
+    
+    .articleBody h2, .mceContentBody h2
+    {
+        font-size: 22px;
+    }
+    
+    .articleBody h3, .mceContentBody h3
+    {
+        font-size: 20px;
+    }
+    
+    .articleBody h4, .mceContentBody h4
+    {
+        font-size: 18px;
+    }
+    
+    .articleBody h5, .mceContentBody h5
+    {
+        font-size: 16px;
+    }
+    
+    .articleBody h6, .mceContentBody h6
+    {
+        font-size: 14px;
+    }
+
+    .articleBody p, .mceContentBody  p
+    {
+        padding: 0px;
+        margin: 0px 0px 24px 0px;
+	    line-height:16px;
+        word-wrap: break-word;
+    }
+    
+    /*These are styles taken directly from wordpress 2010 stylesheet
+     *They are required
+     */
+    .articleBody .alignleft, .mceContentBody .alignleft
+    {
+        display: inline;
+        float: left;
+        margin-right: 24px;
+        margin-top: 4px;
+    }
+    
+    .articleBody .aligncenter, .mceContentBody .aligncenter
+    {
+        clear: both;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .articleBody .alignright, .mceContentBody .alignright
+    {
+        display: inline;
+        float: right;
+        margin-left: 24px;
+        margin-top: 4px;
+    }
+    
+    .articleBody p.wordpress, .mceContentBody p.wordpress
+    {
+        margin-bottom:24px;
+    }
+    
+    .articleBody .wp-caption, .mceContentBody .wp-caption {
+        background: none repeat scroll 0 0 #F1F1F1;
+        line-height: 18px;
+        margin-bottom: 20px;
+        padding: 4px;
+        text-align: center;
+    }
+
+.articleLeft {
+    float: left;
+    width: 680px;
+	margin: 0 20px 0 0;
+}
+	
+.articleRight {
+    float: right;
+    width: 157px;
+}
+
+.articleMessage 
+{
+    text-align: center;
+}
+
+.articleHead {
+	color: #999;
+	height: 12px;
+	padding: 4px 0;
+	font-size: 11px;
+}
+
+.articleHead > * {
+    float: left;
+    margin-left: 8px;
+}
+
+.articleToolbar
+{
+    margin-top: 6px;
+}
+
+.userDetail strong{
+	font-size: 13px;
+}
+
+span.voteText {
+    color: #004276;
+}
+
+/*=========================================*/
+/* LARGE VOTING WIDGET
+/*=========================================*/
+/* http://codecanyon.net/item/thumbsup/full_screen_preview/50411 */
+
+/* Form wrapper */
+.voteWidget { position:relative; margin:0 auto; padding:0; border:0; cursor:default; }
+.voteWidget.left { margin-left:0; }
+.voteWidget.right { margin-right:0; }
+
+/* Use pointer cursor for all input */
+.voteWidget input, .voteWidget button, .voteWidget label { cursor:pointer; }
+.voteWidget.disabled input, .voteWidget.disabled button, .voteWidget.disabled label { cursor:default; }
+.voteWidget.userVoted input, .voteWidget.userVoted button, .voteWidget.userVoted label { cursor:default; }
+
+/* Remove dotted outlines on buttons in FF: http://bit.ly/cTp1kC */
+.voteWidget input::-moz-focus-inner { border:0; }
+
+.voteWidget { width:100px; height:40px; background:url(../img/interface/largeThumbs.png); text-align:center; color:#000; }
+.voteWidget strong { position:absolute; top:-5px; left:0; right:-180px; font:bold 30px/40px 'Myriad Pro',sans-serif; letter-spacing:-0.05em; }
+.voteWidget .result { left:0; }
+.voteWidget input { position:absolute; bottom:0; padding:0; width:50px; height:40px; background:url(../img/interface/largeThumbs.png) no-repeat 0px 40px; border:0; text-indent:-9999px; }
+.voteWidget input.up { left:0px; }
+.voteWidget input.down { right:0px; }
+.voteWidget input.up:hover, .voteWidget input.up:focus { background-position:0 -40px; }
+.voteWidget input.down:hover, .voteWidget input.down:focus { background-position:-50px -40px; }
+.voteWidget input.up:active { background-position:0 -80px; }
+.voteWidget input.down:active { background-position:-50px -80px; }
+.voteWidget.userVoted input.up, .voteWidget.busy input.up { background-position:0 -120px; }
+.voteWidget.userVoted input.down, .voteWidget.busy input.down { background-position:-50px -120px; }
+/*
+.voteWidget.loginToVote input.up { background-position:0 -160px; }
+.voteWidget.loginToVote input.down { background-position:-50px -160px; }
+*/
+
+/*=========================================*/
+/* RELATED ARTICLES LIST                   */
+/*=========================================*/
+.articleList 
+{
+    margin: 13px 0px 0px 0px;
+}
+
+    .articleList ul, .articleList ol {
+        margin: 8px;
+        padding: 0px 0px 0px 8px;
+    }
+    
+    .articleList li 
+    {
+        padding-bottom: 8px;
+        /*overflow: hidden; overflow hidden cannot be used here since it hides the bullet points*/
+        word-wrap: break-word;
+    }
