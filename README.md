@@ -7,3 +7,8 @@ authors
 ==========
 
 InsideWord was originally created in private.  It has been open sourced to contribute back to the community.  It is brought to you by [Peta15](https://github.com/peta15), [Thirlan](https://github.com/thirlan), and Aaron Kligman
+
+version
+==========
+
+This version is ported from the latest svn release v0.5.2.406
