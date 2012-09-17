@@ -12,3 +12,8 @@ version
 ==========
 
 This version is ported from the latest svn release v0.5.2.406
+
+demo
+==========
+
+http://www.insideword.com
